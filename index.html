@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>CDE4301 Final Report - Team META</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -31,6 +31,36 @@
   <script src="./components/table-component/table-component.js"></script>
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <style>
+    /* Table styling for final report content */
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .content table th,
+    .content table td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .content table th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+    .content table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    .figure-caption {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -42,193 +72,159 @@
     <div class="sidebar-nav">
     <div class="table-of-content">
       <h2>Table of Contents</h2>
-      <sl-tree>
-        <sl-tree-item>
-          <a href="#section-1-introduction">1. Introduction (Maia & Jonathan)</a>
-        </sl-tree-item>
+            <sl-tree>
         <sl-tree-item expanded>
-          <a href="#section-2-understanding-the-elderly-loneliness-problem">2. Understanding the Elderly Loneliness
-            Problem (Thulasidas & Jonathan)</a>
+          <a href="#section-1-intro">1. Introduction &amp; Problem Clarification</a>
           <sl-tree-item>
-              <a href="#section-2-1-design-methodology">2.1. Design Methodology</a>
+            <a href="#1.1-project-objective">1.1 Project Objective</a>
+            <sl-tree-item>
+              <a href="#1.1.1-project-brief-and-collaboration">1.1.1 Project Brief and Collaboration</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#section-2-2-literature-review">2.2. Literature Review </a>
+              <a href="#1.1.2-market-opportunity-and-form-factor-fit">1.1.2 Market Opportunity and Form Factor Fit</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#1.2-introduction">1.2 Introduction</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#1.3-primary-research">1.3 Primary Research</a>
+            <sl-tree-item>
+              <a href="#1.3.1-obtaining-desired-outcomes-of-golfers--putting">1.3.1 Obtaining Desired Outcomes</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#section-2-3-survey-data">2.3. Survey Data</a>
-              <sl-tree-item>
-                <a href="#section-2-3-1-stakeholder-analysis">2.3.1 Stakeholder Analysis</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-2-3-2-affinity-analysis">2.3.2 Affinity Analysis</a>
-              </sl-tree-item>
+              <a href="#1.3.2-jobs-to-be-done-framework">1.3.2 Jobs-To-Be-Done Framework</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#1.4-analysis-of-primary-research">1.4 Analysis of Primary Research</a>
+            <sl-tree-item>
+              <a href="#1.4.1-the-5-whys">1.4.1 The 5 Whys</a>
+            </sl-tree-item>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#1.5-secondary-research">1.5 Secondary Research</a>
+            <sl-tree-item>
+              <a href="#1.5.1-inaccurate-playing-yardage">1.5.1 Inaccurate Playing Yardage</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#section-2-4-synthesis-of-data">2.4. Synthesis of Data</a>
-            </sl-tree-item>
-          </sl-tree-item>
-        </sl-tree-item>
-
-        <!-- </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-2-1-design-methodology">2.1. Design Methodology</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-2-2-literature-review">2.2. Literature Review </a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-2-3-survey-data">2.3. Survey Data</a>
-            <sl-tree-item>
-              <a href="#section-2-3-1-stakeholder-analysis">2.3.1 Stakeholder Analysis</a>
+              <a href="#1.5.2-inaccessibility-to-professionals">1.5.2 Inaccessibility to Professionals</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#section-2-3-2-affinity-analysis">2.3.2 Affinity Analysis</a>
+              <a href="#1.5.3-unaddressed-mental-dimension">1.5.3 Unaddressed Mental Dimension</a>
             </sl-tree-item>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-2-4-synthesis-of-data">2.4. Synthesis of Data</a>
-          </sl-tree-item>
-        </sl-tree-item> -->
-        <sl-tree-item expanded>
-          <a href="#section-3-supporting-the-elderly">3. Supporting the Elderly with a Digital Befriender (Jonathan & Thulasidas)</a>
-          <sl-tree-item>
-            <a href="#section-3-1-problem-statement-for-the-elderly">3.1. Problem Statement</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-3-2-elderly-needs">3.2. Elderly Needs</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-3-3-case-studies-on-ai-companions">3.3. Case Studies on AI Companions</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-3-4-development-of-concepts">3.4. Development of Concepts</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-3-5-critical-function-prototyping">3.5. Critical Function Prototyping</a>
+            <a href="#1.6-value-proposition">1.6 Value Proposition</a>
             <sl-tree-item>
-              <a href="#section-3-5-1-befriender-at-your-service">3.5.1. Befriender at Your Service</a>
+              <a href="#1.6.1-customer-profile">1.6.1 Customer Profile</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#section-3-5-2-connecting-you">3.5.2. Connecting You</a>
+              <a href="#1.6.2-value-map">1.6.2 Value Map</a>
             </sl-tree-item>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-3-6-results">3.6. Results</a>
-            <sl-tree-item>
-              <a href="#section-3-6-1-befriender-at-your-service">3.6.1. Befriender at Your Service</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-6-2-connecting-you">3.6.2. Connecting You</a>
-            </sl-tree-item>
+            <a href="#1.7-problem-statement">1.7 Problem Statement</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-3-7-refinement-of-concept">3.7. Selection and Refinement of Concept</a>
+            <a href="#1.8-project-boundary">1.8 Project Boundary</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#1.9-design-specifications">1.9 Design Specifications</a>
           </sl-tree-item>
         </sl-tree-item>
         <sl-tree-item expanded>
-          <a href="#section-4-tackling-social-isolation">4. Tackling Social Isolation through Empowering Social
-            Workers</a>
+          <a href="#2--concept-development">2. Concept Development</a>
           <sl-tree-item>
-            <a href="#section-4-1-pretext-and-problem-statement">4.1. Pretext and Problem Statement for Social
-              Workers (Maia)</a>
-            <sl-tree-item>
-              <a href="#section-4-1-1-role-of-social-workers">4.1.1. Role of Social Workers</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-1-2-current-gaps-faced">4.1.2. Current Gaps faced by Social Workers</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-1-3-problem-statement-for-social-worker">4.1.3. Problem Statement for Social
-                Worker</a>
-            </sl-tree-item>
+            <a href="#2.1-design-selection-for-information-relay">2.1 Design Selection for Information Relay</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-4-2-identifying-needs">4.2. Identifying Needs and Desired Outcomes of Social Workers
-              (Rex)</a>
-            <sl-tree-item>
-              <a href="#section-4-2-1-why-outcome-driven-innovation">4.2.1. Why the Outcome-Driven Innovation Approach?</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-2-2-job-map">4.2.2. Job Map of Social Workers</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-2-3-filtering-of-outcomes">4.2.3. Filtering desired outcomes of social workers</a>
-            </sl-tree-item>
+            <a href="#2.2--technology-selection-for-the-hardware-subsystem">2.2 Technology Selection for Hardware</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-4-3-concept-exploration">4.3. Concept Exploration for Underserved Outcomes of Social
-              Workers (Rex)</a>
-            <sl-tree-item>
-              <a href="#section-4-3-1-concepts-for-aiding">4.3.1. Concepts for Aiding Social Workers</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-3-2-trade-off-analysis">4.3.2. Trade-off Analysis</a>
-            </sl-tree-item>
+            <a href="#2.3--interfacing-the-xreal-glasses-with-bare-metal">2.3 Interfacing Xreal with Bare Metal</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-4-4-critical-experience-prototype">4.4. Critical Experience Prototype (CEP) (Rex)</a>
-            <sl-tree-item>
-              <a href="#section-4-4-1-formation-of-cep">4.4.1. Formation of CEP</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-4-2-results-of-cep">4.4.2. Results of CEP</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-4-3-post-cep-questionnaire">4.4.3. Post CEP Questionnaire Findings</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-4-4-conclusion-of-results">4.4.4. Conclusion of Results</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-4-5-shortcomings-of-results">4.4.5. Shortcomings of Results</a>
-            </sl-tree-item>
+            <a href="#2.4--logical-architecture">2.4 Logical Architecture</a>
+          </sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#3--prototyping">3. Prototyping</a>
+          <sl-tree-item>
+            <a href="#3.1--iterative-design-of-hardware-layer">3.1 Iterative Design of Hardware Layer</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-4-5-future-refinement">4.5. Future Refinement of Concepts for Social Workers (Rex)</a>
+            <a href="#3.2--iterative-design-of-application-layer">3.2 Iterative Design of Application Layer</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#section-4-6-next-steps">4.6. Next Steps for Social Workers (Rex)</a>
+            <a href="#3.3--iterative-design-of-backend-software-layer">3.3 Backend Software Layer</a>
+            <sl-tree-item>
+              <a href="#3.3.1--remote-control-module">3.3.1 Remote Control Module</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#3.3.2-eye-tracking-module">3.3.2 Eye Tracking Module</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#3.3.3--ai-caddie-module">3.3.3 AI Caddie Module</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#3.3.4--weather-data-module">3.3.4 Weather Data Module</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#3.3.5-yardage-calculator-module">3.3.5 Yardage Calculator Module</a>
+            </sl-tree-item>
+          </sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#4--testing---validation">4. Testing &amp; Validation</a>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#5--results---discussion">5. Results &amp; Discussion</a>
+          <sl-tree-item>
+            <a href="#5.1-analysis-of-results">5.1 Analysis of Results</a>
+            <sl-tree-item>
+              <a href="#5.1.1-validation-of-quiet-eye-feedback-against-literature">5.1.1 Quiet Eye Validation</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#5.1.2-playing-yardage-calculator-—-accuracy-and-decision-impact">5.1.2 Yardage Calculator</a>
+            </sl-tree-item>
+            <sl-tree-item>
+              <a href="#5.1.3-hardware-ergonomics-—-human-factors-analysis">5.1.3 Hardware Ergonomics</a>
+            </sl-tree-item>
+          </sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#6--recommendations---reflection">6. Recommendations &amp; Reflection</a>
+          <sl-tree-item>
+            <a href="#6.1-identification-of-shortcomings">6.1 Identification of Shortcomings</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#6.2-future-works-to-be-done-at-stanford">6.2 Future Works at Stanford</a>
+          </sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#7--impact---visibility--a9-">7. Impact &amp; Visibility</a>
+          <sl-tree-item>
+            <a href="#7.1-cross-sport-applicability">7.1 Cross-Sport Applicability</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#7.2-non-sport-training-and-education">7.2 Non-Sport Training</a>
+          </sl-tree-item>
+          <sl-tree-item>
+            <a href="#7.3-market-potential-and-industrial-scale">7.3 Market Potential</a>
           </sl-tree-item>
         </sl-tree-item>
         <sl-tree-item>
-          <a href="#section-5-conclusion">5. Conclusion (All)</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#section-6-future-plans">6. Future Plans for the Project (Rex)</a>
-          <sl-tree-item>
-            <a href="#section-6-1-project-gantt-chart">6.1. Project Gantt Chart</a>
-          </sl-tree-item>
+          <a href="#8--references">8. References</a>
         </sl-tree-item>
         <sl-tree-item>
-          <a href="#references">7. References</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-a">Appendix A</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-b">Appendix B</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-c">Appendix C</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-d">Appendix D</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-e">Appendix E</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-f">Appendix F</a>
-        </sl-tree-item>
-        <sl-tree-item expanded>
-          <a href="#appendix-g">Appendix G</a>
+          <a href="#annex-a">Annex A</a>
         </sl-tree-item>
       </sl-tree>
     </div>
   </div>
   <!-- <div class="content main-content"> -->
-  <div class="main-content">
+<div class="main-content">
 
     <div class="content">
 
@@ -274,1044 +270,1252 @@
       <sl-divider></sl-divider>
 
 
-      <!-- <div class="table-of-content">
-        <h2>Table of Contents</h2>
-        <sl-tree>
-          <sl-tree-item>
-            <a href="#section-1-introduction">1. Introduction (Maia & Jonathan)</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#section-2-understanding-the-elderly-loneliness-problem">2. Understanding the Elderly Loneliness
-              Problem (Thulasidas & Jonathan)</a>
-            <sl-tree-item>
-              <a href="#section-2-1-literature-review">2.1. Literature Review</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-2-2-survey-data">2.2. Survey Data</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-2-3-generation-of-needs-statement">2.3. Generation of Needs Statement</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-2-4-synthesis-of-data">2.4. Synthesis of Data</a>
-            </sl-tree-item>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#section-3-supporting-the-elderly">3. Supporting the Elderly (Jonathan and Thulasidas)</a>
-            <sl-tree-item>
-              <a href="#section-3-1-problem-statement-for-the-elderly">3.1. Problem Statement for the Elderly</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-2-elderly-needs">3.2. Elderly Needs</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-3-case-studies-on-ai-companions">3.3. Case Studies on AI Companions</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-4-development-of-concepts">3.4. Development of Concepts</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-5-critical-function-prototyping">3.5. Critical Function Prototyping</a>
-              <sl-tree-item>
-                <a href="#section-3-5-1-befriender-at-your-service">3.5.1. Befriender at Your Service</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-3-5-2-connecting-you">3.5.2. Connecting You</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-6-results">3.6. Results</a>
-              <sl-tree-item>
-                <a href="#section-3-6-1-befriender-at-your-service">3.6.1. Befriender at Your Service</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-3-6-2-connecting-you">3.6.2. Connecting You</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-3-7-refinement-of-concept">3.7. Refinement of Concept</a>
-            </sl-tree-item>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#section-4-tackling-social-isolation">4. Tackling Social Isolation through Empowering Social
-              Workers</a>
-            <sl-tree-item>
-              <a href="#section-4-1-pretext-and-problem-statement">4.1. Pretext and Problem Statement for Social
-                Workers (Maia)</a>
-              <sl-tree-item>
-                <a href="#section-4-1-1-role-of-social-workers">4.1.1. Role of Social Workers</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-1-2-current-gaps-faced">4.1.2. Current Gaps faced by Social Workers</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-1-3-problem-statement-for-social-worker">4.1.3. Problem Statement for Social
-                  Worker</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-2-identifying-needs">4.2. Identifying Needs and Desired Outcomes of Social Workers
-                (Rex)</a>
-              <sl-tree-item>
-                <a href="#section-4-2-1-job-map">4.2.1. Job Map and Desired Outcomes of Social Workers</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-3-concept-exploration">4.3. Concept Exploration for Underserved Outcomes of Social
-                Workers (Rex)</a>
-              <sl-tree-item>
-                <a href="#section-4-3-1-concepts-for-aiding">4.3.1. Concepts for Aiding Social Workers</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-3-2-trade-off-analysis">4.3.2. Trade-off Analysis</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-4-critical-experience-prototype">4.4. Critical Experience Prototype (CEP) (Rex)</a>
-              <sl-tree-item>
-                <a href="#section-4-4-1-formation-of-cep">4.4.1. Formation of CEP</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-4-2-results-of-cep">4.4.2. Results of CEP</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-4-3-post-cep-questionnaire">4.4.3. Post CEP Questionnaire Findings</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-4-4-conclusion-of-results">4.4.4. Conclusion of Results</a>
-              </sl-tree-item>
-              <sl-tree-item>
-                <a href="#section-4-4-5-shortcomings-of-results">4.4.5. Shortcomings of Results</a>
-              </sl-tree-item>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-5-future-refinement">4.5. Future Refinement of Concepts for Social Workers (Rex)</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#section-4-6-next-steps">4.6. Next Steps for Social Workers (Rex)</a>
-            </sl-tree-item>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#section-5-conclusion">5. Conclusion (All)</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#section-6-future-plans">6. Future Plans for the Project (Rex)</a>
-            <sl-tree-item>
-              <a href="#section-6-1-project-gantt-chart">6.1. Project Gantt Chart</a>
-            </sl-tree-item>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#references">7. References</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-a">Appendix A</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-b">Appendix B</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-c">Appendix C</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-d">Appendix D</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-e">Appendix E</a>
-          </sl-tree-item>
-          <sl-tree-item expanded>
-            <a href="#appendix-f">Appendix F</a>
-          </sl-tree-item>
-        </sl-tree>
-      </div> -->
-      <!-- <sl-divider></sl-divider> -->
-
       <div>
-        <div id="section-1-introduction">
-          <h2> 1. Introduction (Maia & Jonathan) </h2>
-          <p>
-            The NUS-Stanford Global Engineering Design Innovation Programme is a collaborative effort between the 2 universities, where project teams, together with an industry partner, work to solve a problem provided by the industry partner. The prompt assigned to us is as follows: This project explores how smart glasses, sensors, and AI can augment and enrich social interactions. Students should consider diverse user groups to uncover unmet needs, then propose solutions that address those needs through the design of the user experience and hardware/software capabilities.
+<div id="1.-introduction-&-problem-clarification">
+  <h2>1. Introduction & Problem Clarification</h2>
+</div>
 
-          </p>
-          <p>
-            Our team, under the guidance of our professor and advisor, Professor Khoo Eng Tat and Graham Zhu, started by exploring many potential user groups. We then delved deeper into a select few with the most potential to work on. Initial groups we explored included the visually-impaired, hearing-impaired and networking professionals. After weeks of research and deliberation, we have decided to focus our efforts on the topic of elderly loneliness, an increasingly prevalent problem around the world and in Singapore. 
-          </p>
-          <p>
-            In 2023, the World Health Organisation declared loneliness a global public health concern [1]. Around the world, countries have created task forces to tackle this issue specifically [2]. Japan and the United Kingdom have established a new role called the Minister for Loneliness, which highlights the increased focus that these countries are putting on addressing it [2]. In Singapore, about an average of 50% or more people feel socially isolated and coupled with the ageing population, it puts a strain on our community to reach out to the elderly and keep them engaged [3]. The truth of the matter is: the silver tsunami is increasingly enveloping our populations and exacerbating this problem in the elderly.
-          </p>
-          <p>
-            Around 14.1% of the elderly above 70 live with a mental disorder, with one of the causes being social isolation, with a staggering suicide rate of 16.6% [4]. They also experience health consequences such as increased risk of developing Alzheimer’s disease.
-          </p>
-          <p>
-            Therefore, this project aims to create a new system using Extended Reality (XR) and Artificial Intelligence (AI) to bridge the gap faced by the elderly when building and maintaining social interactions.
-          </p>
-        </div>
+<image-component tag="final-img-2" source="assets/figure/final_image2.png" subtitle="" style="max-width: 900px;"></image-component>
 
-        <div id="section-2-understanding-the-elderly-loneliness-problem">
-          <h2> 2. Understanding the Elderly Loneliness Problem (Thulasidas & Jonathan) </h2>
-        </div>
+<div id="1.1-project-objective">
+  <h3>1.1 Project Objective</h3>
+</div>
 
-        <div id="section-2-1-design-methodology">
-          <h3>2.1. Design Methodology</h3>
-          <p>
-            To structure our work from problem exploration to concept testing, we referenced the Design Innovation Methodology Handbook by SUTD [30]. This approach was selected over more linear, solution-first methods because elderly loneliness is a complex, ill-defined problem that requires iterative, user-centred learning rather than a fixed specification upfront.
-          </p>
-          <image-component tag="fig-1" source="assets/figure/f1.png" subtitle="Figure 1: Four Stages of Design Thinking" style="max-width: 900px;"></image-component>
-          <p>
-            In the discovery phase, we reviewed existing policies and programmes on elderly social isolation, identified gaps, then conducted stakeholder interviews (academics, social workers, community partners) and card-sorting activities with elderly participants. This stage established the current ecosystem, pain points, and opportunity areas.
-          </p>
-          <p>
-            In the definition phase, we focused on two key stakeholders (the elderly and social workers). We synthesised the qualitative data into user needs and problem statements, which act as criteria against which concepts are later evaluated.
-          </p>
-          <p>
-            In the development phase, these criteria guided us to generate multiple concept directions and filtered them against feasibility and alignment with identified needs. Concepts that did not address critical needs were deprioritised.
-          </p>
-          <p>
-            In the delivery phase, we then built critical function prototypes for shortlisted concepts and tested them with users to evaluate the usability and behavioural impact. Quantitative and qualitative results from these tests directly informed the refinement and combination of ideas in subsequent sections.
-          </p>
-          <p>
-            This systematic use of design thinking ensures that our chosen concepts are not only clearly identified but also grounded in user evidence and iteratively justified against alternatives that were explored but not carried forward.
-          </p>
-        </div>
+<div id="1.1.1-project-brief-and-collaboration">
+  <h4>1.1.1 Project Brief and Collaboration</h4>
+</div>
 
-        <div id="section-2-2-literature-review">
-          <h3>2.2. Literature Review </h3>
-          <p>
-            <u>Social Isolation vs Loneliness</u>
-          </p>
-          <p>
-            According to Puyane et al, social isolation refers to an objective lack of social contact, while loneliness is the subjective experience of unmet social needs [5]. A study identified key factors contributing to elderly loneliness, such as: being old, a widow/divorced, having a lower level of education and/or income, living alone, having a chronic disease, poor self-perceived health, lack of visits by relatives or acquaintances, dissatisfaction with the place of living, and being fully dependent while performing daily activities [6].
-          </p>
-          <p>
-            What can be done to combat this? It turns out that having more frequent, more pleasant and in-person social interactions, as well as interactions with friends and family specifically, significantly predicted lower momentary loneliness a few hours later [7]. Additionally, home-based interventions were found to significantly increase older adults’ social connectedness (social support and social engagement) and reduce their loneliness and depressive symptoms; and interventions using mixed platforms were more favourable, which include face-to-face and digital delivery [8]. 
-          </p>
-          <p>
-            <u>Active ageing, Befriending, and Care and support in the Community model (ABC)</u>
-          </p>
-          <image-component tag="fig-2" source="assets/figure/f2.png" subtitle="Figure 2: ABC Model"></image-component>
-          <p>
-            Singapore's strategy to combat social isolation employs the 'ABC' framework, which differentiates its approach across a continuum of need: Active Ageing functions as the primary preventive strategy for all older adults, promoting participation in social, cultural, spiritual, and civic affairs to maintain overall health and quality of life, thereby stemming the initial onset of isolation [9]. In contrast, Befriending is a targeted intervention focusing on older people already identified as socially isolated, creating a "purpose-built, one-on-one relationship" to provide direct companionship and fill the social gap for those who lack a personal network [10], [11]. Finally, the Community pillar, facilitated by groups such as Resident Networks and the People's Association, offers accessible programs, such as fitness classes and arts and crafts sessions, that serve as supported group-based environments to foster new social connections and encourage active engagement among seniors in their neighbourhood [12].
-          </p>
-          <p>
-            <u>Befriender Model Overview</u>
-          </p>
-          <p>
-            As Singapore's traditional family structures evolve and fewer relatives live together, the societal need for companionship services has grown, prompting social service agencies to complement their core programmes with befriending [13], [14]. This service targets older adults who exhibit at least one of the four risk factors: living alone, physical or cognitive impairment, limited social networks, or serving as a primary caregiver. These factors reduce the daily social contact and emotional support that the individuals need.
-          </p>
-          <p>
-            In response, the Agency for Integrated Care (AIC) defines a befriender primarily as a companion who provides sustained emotional support and cultivates meaningful social bonds. Through regular home visits and conversations, befrienders work to reduce loneliness and encourage seniors to participate in activities outside the home [14].
-          </p>
-          <p>
-            <u>Gap in the Current Model</u>
-          </p>
-          <image-component tag="fig-3" source="assets/figure/f3.png" subtitle="Figure 3: Gaps in the Befriending model"></image-component>
-          <p>
-            Current befriending services face a twofold crisis in logistics and design. Agencies struggle to recruit and retain volunteers for long-term commitments because the model requires frequent visits, such as twice weekly over six months or longer, and few people can sustain this level of involvement [15]. Turnover matters because isolated seniors need time and a steady presence to build trust, and for many, consistency is not a preference but a source of personal security. Knowing that someone will reliably visit or call creates perceived dependability, which is important for befriending to be successful [16]. 
-          </p>
-          <p>
-            Despite these operational challenges, research on the befriending model often shows weak and inconsistent long-term effectiveness [17]. This failure stems from a disconnect between the service's design and what seniors actually value [17].
-          </p>
-          <p>
-            Practitioners report that the loneliest seniors do not want a random visitor; they want a genuine connection with peers who share similar backgrounds and life experiences [13]. Research shows that effective befriending does not happen by chance and depends on activating specific mechanisms that current models often ignore [17]. The mechanisms include empathy, reciprocity and autonomy. Shared experience generates empathy, for example, when a befriender and a senior both live with arthritis. Shared characteristics foster reciprocity, enabling volunteers and users to form mutual two-way relationships. Long-term flexible relationships support autonomy, while rigid, predefined priorities do not. To be effective, programmes must therefore prioritise deliberate matching and sustained relationships.
-          </p>
-          <p>
-            In summary, the current befriending model fails because it is built on a "buddy" system of random, high-turnover volunteers, while the loneliest seniors need consistent, peer-to-peer connections to feel secure and understood. 
-          </p>
-          <p>
-            <u>Existing Technological Solutions and Gaps</u>
-          </p>
-          <image-component tag="fig-4" source="assets/figure/f4.png" subtitle="Figure 4: Current Solutions"></image-component>
-          <p>
-            Current technology-enabled solutions for elderly social isolation broadly fall into four categories: Social robots, AI voice bots, Avatar-based AI, and Chat-based AI. Social robots provide physical presence and embodied interaction, while AI voice bots focus on hands-free, speech-based support. Avatar-based AI adds a visual, often more emotionally engaging companion, and chat-based AI offers flexible, text-driven conversation across devices.
-          </p>
-          <image-component tag="table-1" source="assets/table/t1_new.jpg" 
-          subtitle="Table 1: Overview of current solutions"></image-component>
-          <p>
-            Overall, current solutions provide useful forms of emotional support, but they remain limited in three areas: they are tied to fixed devices rather than following the senior through daily routines [20]; they rely heavily on seniors initiating interaction, which is unrealistic for those already experiencing isolation; and they operate in isolation from Singapore’s wider care ecosystem, offering companionship in the moment but little support for sustained social connectedness.
-          </p>
-        </div>
+<image-component tag="final-img-3" source="assets/figure/final_image3.png" subtitle="" style="max-width: 900px;"></image-component>
 
-        <div id="section-2-3-survey-data">
-          <h3>2.3. Survey Data</h3> 
-          <p>
-            We started our journey by interviewing diverse stakeholders, including academics, social workers, startup founders and community organisers from the People’s Association and Active Ageing Centres to gain a deeper understanding of social isolation. We also gathered direct user insights from the elderly through a card sorting activity.
-          </p>
-        </div>
+<p>This project is part of the NUS Innovation & Design Programme (iDP), undertaken as a collaboration between the National University of Singapore (NUS) and Stanford University, with Meta as the industry partner. Meta's project brief challenged the team to explore how smart glasses, sensors, and AI can augment and enrich social interactions — specifically, to identify underserved user groups whose unmet needs could be addressed through hands-free, heads-up wearable technology. The core task was to discover a compelling market application for Meta's Ray-Ban smart glasses platform. We were encouraged to begin with deep user research, uncover genuine pain points, and then propose a solution where the smart glasses form factor delivers a meaningfully better experience than existing alternatives.</p>
 
-        <div id="section-2-3-1-stakeholder-analysis"></div>
-          <h4>2.3.1 Stakeholder Analysis</h4>
-          <image-component tag="fig-5" source="assets/figure/f5.png" subtitle="Figure 5: Stakeholder Mapping"></image-component>
-          <p>
-            We conducted stakeholder mapping to identify high-leverage stakeholders for addressing elderly social isolation. Social workers and Befrienders emerged as the most influential, as they are the primary, high-frequency point of contact for seniors requiring befriending support.
-          </p>
-          <p>
-            The People’s Association’s “touch and go or hug and hold” concept prompted us to prioritise a sustained “hug and hold” approach.
-          </p>
-          <p>
-            While start-ups serving seniors, AACs and the People’s Association are interested in supporting socially isolated seniors, they must cater to the broader elderly population, limiting their ability to focus intensively on the most isolated individuals.
-          </p>
-          <p>
-            The elderly have a high interest in being less socially isolated, but have a low influence to change that due to the structural challenges that they face: programmes that are not of interest to them, inconsistent social support from the community, and the digital divide. 
-          </p>
-        </div>
+<div id="1.1.2-market-opportunity-and-form-factor-fit">
+  <h4>1.1.2 Market Opportunity and Form Factor Fit</h4>
+</div>
 
-        <div id="section-2-3-2-affinity-analysis">
-          <h4>2.3.2 Affinity Analysis</h3>
-          <p>
-            With the insights tabulated in <a href="https://miro.com/app/board/uXjVJAMZw-E=/">Miro</a>, we were able to carry out affinity analysis to organise information into its natural categories and relationships.
-          </p>
+<image-component tag="final-img-4" source="assets/figure/final_image4.png" subtitle="" style="max-width: 900px;"></image-component>
 
-          <p>
-            We identified categories of needs that could be broadly classified under social interactions, successful interactions, autonomy, training and support for workers, cognitive stimulation, and cultural stigma. From these categories, we developed broad-level need statements (Refer to <a href="#appendix-g">Appendix G</a>).
-          </p>
-          <image-component tag="fig-6" source="assets/figure/f6.png" subtitle="Figure 6: Miro insights" style="max-width: 900px;"></image-component>
-          <image-component tag="fig-7" source="assets/figure/f7.png" subtitle="Figure 7: Miro Insights" style="max-width: 900px;"></image-component>
-        </div> 
+<p>We identified recreational golf as a uniquely high-value application for smart glasses technology. The global golf industry represents a substantial and growing market:  The global golf industry is substantial and growing: the U.S. golf courses and country clubs sector alone reached US$41.0 billion in 2024 [m1], the global golf equipment market is estimated at US$9.24 billion in 2025 [m2], and the golf GPS device market — the segment most directly comparable to our product — was valued at US$3.2 billion in 2024, growing at 8.5% CAGR [m3], confirming that golfers already pay for on-course technology. Golf is also an ideal form-factor fit: it is a hands-occupied, eyes-up sport where pulling out a phone or rangefinder disrupts the pre-shot routine, and where invisible environmental variables (wind, temperature, altitude) directly affect every shot. This combination of a large, tech-receptive market with well-documented performance pain points made golf the strongest candidate for an AR-assisted, AI-powered smart glasses application.</p>
 
-        <div id="section-2-4-synthesis-of-data">
-          <h3>2.4. Synthesis of Data</h3> 
-          <image-component tag="fig-8" source="assets/figure/f8.png" subtitle="Figure 8: Two-pronged Approach" style="max-width: 300px;"></image-component>
-          <p>
-            Drawing on our primary and secondary research, we adopt a two-pronged approach centred on the elderly and social workers who have one of the greatest influence on socially isolated elderly in our stakeholder map. 
-          </p>
-          <p>
-            First, we aim to strengthen the befriender model for the elderly: given persistent manpower shortages, current schemes cannot reliably provide sustained companionship, so we propose leveraging technology to complement befrienders and reduce reliance on scarce volunteers.
-          </p>
-          <p>
-            Second, we empower social workers to deliver more timely, personalised support. Heavy caseloads and administrative burden constrain service quality. Hence, by streamlining workflows and providing decision support, social workers can devote more time to high-value interactions that help seniors reconnect with the community.
-          </p>
-        </div>
-      <!-- </div> -->
+<div id="1.2-introduction">
+  <h3>1.2 Introduction</h3>
+</div>
 
-      <br />
-      <br />
-      <sl-divider></sl-divider>
-      <div>
-        <div id="section-3-supporting-the-elderly">
-          <h2>3. Supporting the Elderly with a Digital Befriender (Jonathan & Thulasidas)</h2>
-          <p>
-            In this section, we will explore the concepts related to addressing the gaps identified in the befriender model. 
-          </p>
-        </div>
+<image-component tag="final-img-5" source="assets/figure/final_image5.png" subtitle="" style="max-width: 900px;"></image-component>
 
-        <div id="section-3-1-problem-statement-for-the-elderly">
-          <h3>3.1. Problem Statement</h3>
-          <p>
-            Socially isolated elderly in Singapore need reliable, long-term companionship to reduce loneliness and preserve their overall well-being. Existing befriending models fail to deliver sustained, well-matched relationships due to volunteer shortages and the short-term matching of random volunteers who do not meet the needs of the elderly.
-          </p>
-        </div>
+<p class="figure-caption"><em>Figure : Richard T Lee missing a 2 foot Putter</em></p>
 
-        <div id="section-3-2-elderly-needs">
-          <h3>3.2. Elderly Needs</h3>
-          <p>
-            To address the problem statement, the solution must address the following elderly needs:
-          </p>
-          <ol>
-            <li>Elderly users need a non-judgmental space where they can express views and emotions without criticism or stigma.</li>
-            <li>Elderly users need companionship access that is consistently available when they reach out.</li>
-            <li>Elderly users need an interaction channel that is accessible and intuitive for low digital-literacy users and those with sensory or motor limitations.</li>
-          </ol>
-        </div>
+<p><em>"The adrenaline was pumping a little bit."</em> [R1] This was professional golfer Richard T. Lee's explanation after a stunning miss: a 2-foot putt on March 15, 2026, that cost him the Aramco LIV Golf Singapore title. If a seasoned pro can "choke" on a distance usually considered unmissable, it begs a fundamental question: <strong>why do golfers fail to consistently execute the shots they are physically capable of making?</strong></p>
 
-        <div id="section-3-3-case-studies-on-ai-companions">
-          <h3>3.3. Case Studies on AI Companions</h3>
-          <p>
-            A two-week ChatGPT intervention with 20 older adults reduced the proportion scoring above the UCLA loneliness threshold of 43, a high degree of loneliness, from 100% to 32%. Participants attributed this change to the system’s constant availability and perceived dependability, noting that “ChatGPT is always there to chat with me, no matter the time or day.” 
-          </p>
-          <p>
-            They valued the AI’s ability to hold context-rich conversations across social, recreational and informational topics, saying “I liked that ChatGPT could talk about a lot of different things, from the weather to my favourite TV shows,” and they described most interactions as social, recreational, educational or emotional in nature [18]. 
-          </p>
-          <p>
-            Users also highlighted practical benefits, including instant information retrieval, calendar management and medication reminders, and they said the AI’s patient, non-judgmental responses encouraged disclosure and emotional sharing. Several participants called the system a confidant, reporting that “it understands me in ways that no one else can,” and many summed up the experience with, “It’s comforting to know that there is someone who listens and understands, even if it’s an AI.” Together, these findings show that consistent availability, empathetic tone, contextual knowledge and being an easy information source combine to produce meaningful companionship and measurable reductions in loneliness [18]. 
-          </p>
-          <p>
-            A six-month pilot of an Alexa AI assistant with 105 homebound older adults produced a mean reduction of 10.87 points on the UCLA Loneliness Scale, offering a real-world benchmark for medium-term impact [19]. The device functioned as a companion, facilitating communication with family and friends and providing practical support such as medication and appointment reminders, suggesting that conversational presence combined with task assistance can improve both social connectedness and day-to-day functioning [19].
-          </p>
-          <p>
-            With the research being positive on the use of chatbots to alleviate the perception of loneliness the next promising direction include prioritising low-friction delivery, such as TV and natural speech or gesture interfaces to maximise uptake, leveraging AI’s always-on availability to provide consistent perceived dependability that builds trust, and using proactive but tunable nudges to increase engagement while monitoring intrusion [20],[21]. 
-          </p>
-          <p>
-            This gap creates a clear design space for alternative solutions that reliably deliver consistent, judgment-free social contact that the elderly can relate to, which could potentially nudge them to carry out activities that reduce social isolation.
-          </p>
-        </div>
+<p>The answer lies in a hidden battle between mental focus and environmental complexity. Golf demands instantaneous decisions based on invisible variables—wind gradients, altitude, and humidity—that drastically alter ball flight. While elite caddies help pros navigate these, most golfers are left to guess. More critically, sports psychology has identified the "Quiet Eye" (QE) phenomenon as the ultimate differentiator: elite golfers hold a steady gaze for 2.5 to 3 seconds before a putt, while amateurs typically fixate for less than one [m4]. Research proves that training this specific attentional skill can shave 2 strokes per round [m5], yet no consumer product currently exists to help golfers visualize and master this "pro" advantage in real-time.</p>
 
-        <div id="section-3-4-development-of-concepts">
-          <h3>3.4. Development of Concepts</h3>
-          <p>
-            From the previous section, conversational AI can help alleviate loneliness among older adults. When paired with the hands-free interface of AR glasses, this approach can significantly reduce the friction in user interaction. Building on this idea, we propose two concepts designed to address the companionship gap faced by socially isolated elderly individuals.
-          </p>
-          <image-component tag="fig-9" source="assets/figure/f9.png" style="max-width: 300px; width: 100%"
-            subtitle="Figure 9: A visual illustration of Befriender at Your Service (Generated using Gemini)"></image-component>
-          <ol>
-            <li><strong>Befriender at Your Service:</strong> This concept envisions AR glasses equipped with a familiar avatar and a conversational AI tailored to the needs of older adults. The system sustains companionship by proactively initiating check-ins, recalling past conversations and personal preferences. The AI will employ non-judgmental, validation-oriented language to ensure users feel heard and respected. Its always-on availability and predictable interaction cadence offer a stable alternative to volunteer befrienders, helping mitigate the inconsistencies of current models. The interface prioritises accessibility through hands-free, low-friction controls, making it suitable for users with limited technological familiarity or physical impairments.</li>
-          </ol>
-          <image-component tag="fig-10" source="assets/figure/f10.png" style="max-width: 300px; width: 100%"
-            subtitle="Figure 10: A visual illustration of Connecting You (Generated using Gemini)"></image-component>
-          <ol start="2">
-            <li><strong>Connecting You:</strong> This concept features an AR heads-up display that highlights a curated list of close contacts, alongside real-time availability indicators. Users can initiate a voice or video call with a single spoken command, reducing the uncertainty and hesitation associated with interrupting others. By removing technical barriers, such as navigating apps or contact lists, the system streamlines the connection process. Additionally, the interface will show nearby social activities aligned with the user’s interests, along with one-command RSVP and navigation functions. This reduces cognitive load and bridges the gap between event discovery and participation, promoting more frequent and meaningful social engagement.</li>
-          </ol>
-        </div>
+<p>Our project aims to change this. Working in conjunction with Stanford University, with Meta as our project partner, we present an Augmented Reality (AR) heads-up display (HUD) integrated with an AI caddie that provides an edge to golfers by allowing them to see what the elite golfers experience, with real-time, environment-adjusted playing yardage calculator and live focus feedback using a Pupils Lab ‘Bare Metal’ module for measurements of quiet eye.</p>
 
-        <div id="section-3-5-critical-function-prototyping">
-          <h3>3.5. Critical Function Prototyping</h3>
-          <p>
-            To evaluate the effectiveness of our concepts, we conducted critical function prototyping for both ideas. For Befriender at Your Service, we tested whether a conversational AI could sustain natural and engaging dialogue with elderly users. For Connecting You, we assessed whether real-time visibility of loved ones’ availability would encourage more frequent user-initiated contact.
-          </p>
-        </div>
+<div id="1.3-primary-research">
+  <h3>1.3 Primary research</h3>
+</div>
 
-        <div id="section-3-5-1-befriender-at-your-service">
-          <h4>3.5.1. Befriender at Your Service</h4>
-          <image-component tag="fig-11" source="assets/figure/f11.png" style="max-width: 400px; width: 100%"
-            subtitle="Figure 11: Testing of AI Companion with an Elderly"></image-component>
-          <p>
-            We tested three conversational AI models—ChatGPT, Gemini, and Claude—with elderly participants using an iPad interface. Each session lasted 1 hour, with each model being tested for 20 minutes, during which we recorded the following metrics:
-          </p>
-          <ol>
-            <li>Number of conversation interruptions/drop-offs </li>
-            <li>Number of misunderstandings by AI/user during the conversation </li>
-            <li>Ratio of AI-to-user speaking time </li>
-            <li>Number of times the user laughed/smiled (used as a proxy for engagement and enjoyment)</li>
-          </ol>
-          <p>
-            To ensure consistency of the experiment, we prompted the AI based on what makes a good befriender: “You are a compassionate befriender speaking with an older adult in Singapore. Listen, validate, and keep the conversation going. Speak at a moderate pace. Use simple, open-ended questions and let the person finish before you respond. Be empathetic and match their pace and vocabulary. Ask gentle follow-up questions that invite storytelling, and encourage softly if they hesitate. Avoid judging, lecturing, or arguing. If they mention harm, severe distress, or a medical emergency, escalate to a human contact. Keep replies brief and wait for their response.”[22].
-          </p>
-        </div>
+<p>Interviews were conducted with four golfers of varying skill levels and one coach. These sessions were guided by an outcome table comprising specific job steps and outcome statements synthesised from online sources [T2][T3].</p>
 
-        <div id="section-3-5-2-connecting-you">
-          <h4>3.5.2. Connecting You</h4>
-          <p>
-            To evaluate the effectiveness of displaying loved ones’ availability, we conducted a two-day experiment with an elderly participant. On Day 1, we recorded the baseline number of calls made. On Day 2, we introduced the Connecting You prototype by displaying a real-time availability indicator on an iPad positioned beside the living room television, where the elderly will frequently walk past. 
-          </p>
-          <p>
-            The status of loved ones was updated manually via a shared Google Sheet, enabling family members to reflect their availability in real-time. Throughout the day, we tracked both the number of calls made and the number of passive interactions with the iPad (e.g., glances, touches) to gauge the user's level of engagement with the display. 
-          </p>
-          <image-component tag="fig-12" source="assets/figure/f12.png" style="max-width: 400px; width: 100%"
-            subtitle="Figure 12: Display of the Real-time Availability Indicator"></image-component>
-          <p>
-            This setup aimed to test whether easy access to live availability information could lower social hesitation and increase the likelihood of initiating contact.
-          </p>
-        </div>
+<div id="1.3.1-obtaining-desired-outcomes-of-golfers'-putting">
+  <h4>1.3.1 Obtaining desired outcomes of golfers' putting</h4>
+</div>
 
-        <div id="section-3-6-results">
-          <h3>3.6. Results</h3>
-        </div>
+<p>Format of outcome statement: Direction \+ Unit of Measure \+ outcome desired [r2]</p>
 
-        <div id="section-3-6-1-befriender-at-your-service">
-          <h4>3.6.1. Befriender at Your Service</h4>
-          <p>
-            User testing for Befriender at Your Service yielded promising insights into the elderly’s receptiveness to AI-mediated conversations. All three participants described the AI as “easy to talk to” and appreciated its consistently polite and patient tone. They valued having someone to converse with on their own terms, without fear of judgment. Even though they knew the AI was not human, it offered a sense of companionship, making them feel “entertained and heard.”. 
-          </p>
-          <p>
-            The AI has also demonstrated practical utility. In one example, a participant asked where to learn pickleball. The AI responded with a list of nearby facilities, and the participant remarked that this was helpful because he "would not have known how to search those on the internet." This highlights the AI’s potential to bridge digital literacy gaps and provide accessible information in real time.
-          </p>
-          <image-component tag="table-2" source="assets/table/t2_new.jpg" 
-          subtitle="Table 2: Quantitative results from Befriender at Your Service Experiment"></image-component>
-          <p>
-            Quantitative findings (see Table 2) revealed key areas for improvement:
-          </p>
-          <ul>
-            <li>Interruption vs. Enjoyment: A negative correlation was observed between the number of conversation interruptions and user enjoyment (measured by laughter/smiles). Interruptions often occurred when the elderly spoke before the AI finished, leading to awkward pauses and inevitably causing the conversation to break down. Claude AI had the fewest interruptions due to its push-to-send interface, which reduced accidental input from background noise—a common issue with ChatGPT and Gemini, which rely on continuous voice detection.</li>
-            <li>Misunderstanding vs. Enjoyment: Fewer misunderstandings also corresponded with higher engagement. AIs often struggled to interpret local expressions or Singlish, which limited their ability to maintain shared context. Participants noted that these moments made them feel “less understood” or “distant” from the AI.</li>
-            <li>Turn-taking Dynamics: Participants reported that the AI sometimes “talked too much,” creating an unnatural conversation flow. Long monologues from the AI made them feel like they were waiting for their turn, which contradicted typical human conversational patterns where interruptions or overlaps are common.</li>
-          </ul>
-        </div>
+<image-component tag="final-img-6" source="assets/figure/final_image6.png" subtitle="" style="max-width: 900px;"></image-component>
 
-        <div id="section-3-6-2-connecting-you">
-          <h4>3.6.2. Connecting You</h4>
-          <image-component tag="table-3" source="assets/table/t3.jpg" style="max-width: 400px; width: 100%"
-          subtitle="Table 3: Quantitative results from Connecting You Experiment"></image-component>
-          <p>
-            In contrast, the Connecting You prototype yielded limited impact. As shown in Table 3, the number of calls remained the same. However, the participant interacted with the iPad nine times, suggesting passive interest in the display.
-          </p>
-          <p>
-            The elderly participant shared that while the status display helped her stay updated on her loved ones’ busyness, she still hesitated to call due to a lack of conversation topics, saying she “didn’t know what to talk about besides asking how they are.” The display thus offered emotional reassurance but failed to overcome deeper social hesitation or conversation anxiety.
-          </p>
-          <p>
-            Additionally, loved ones found it tedious to update their availability manually via Google Sheets, often forgetting to change their status after completing tasks. This friction further limited the real-time reliability of the system.
-          </p>
-          <p>
-            However, we acknowledge that the small sample size and short duration limit the generalisability of our findings for Connecting You.
-          </p>
-        </div>
+<p class="figure-caption"><em>Figure: Outcome Template used for Interviews</em></p>
 
-        <div id="section-3-7-refinement-of-concept">
-          <h3>3.7. Selection and Refinement of Concept</h3>
-          <p>
-            Findings from the critical function prototyping suggest that Befriender at Your Service holds strong potential in alleviating perceived loneliness among the elderly. Participants appreciated having an always-available companion who responded politely and engaged in conversations on their terms. This constant, non-judgmental presence offered a sense of comfort, agency, and emotional connection.
-          </p>
-          <p>
-            Conversely, the Connecting You concept did not increase the frequency of user-initiated calls. While the live availability display provided some peace of mind by allowing the elderly to stay updated on their loved ones’ busyness, it did not serve as an effective nudge to initiate contact. However, one element of the Connecting You concept, AI-curated activity suggestions, was well-received from our test in the Befriender at Your Service. Participants appreciated learning about nearby events aligned with their interests, given their limited digital literacy, which often prevents them from discovering such opportunities on their own.
-          </p>
-          <p>
-            Based on these insights, we propose merging the two concepts. We will integrate the proactive, personalised event-sharing feature from Connecting You into Befriender at Your Service. The resulting AI companion will not only offer conversational support but also serve as a contextual recommender, nudging users towards meaningful activities in their community.
-          </p>
-          <p>
-            To further refine this concept, we will investigate several key areas in the following semester:
-          </p>
-          <ul>
-            <li>Medium preference: Identify the most suitable hardware interface (e.g., AR glasses, tablet, TV overlay) for elderly users.</li>
-            <li>Localisation: Develop a culturally relevant AI that understands and responds naturally to Singlish, local references, and Singaporean conversational norms.</li>
-            <li>Content design: Discover common conversation topics that resonate with elderly users and determine preferred formats for sharing programme information.</li>
-            <li>Nudging: Assess the effectiveness of using AI to proactively surface interest-aligned programmes and determine whether such nudges increase the likelihood of participation in social or community activities.</li>
-          </ul>
-        </div>
+<p>(<a href="https://docs.google.com/spreadsheets/d/1-ut3Nmal5yFtlOWY6aM0IQ9RLm43_wxK_oevqwFtP0I/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1-ut3Nmal5yFtlOWY6aM0IQ9RLm43\_wxK\_oevqwFtP0I/edit?usp=sharing</a>)</p>
 
-        <div id="section-4-tackling-social-isolation">
-          <h2>4. Tackling Social Isolation through Empowering Social Workers</h2>
-        </div>
+<div id="1.3.2-jobs-to-be-done-framework">
+  <h4>1.3.2 Jobs-To-Be-Done Framework</h4>
+</div>
 
-        <div id="section-4-1-pretext-and-problem-statement">
-          <h3>4.1. Pretext and Problem Statement for Social Workers (Maia)</h3>
-          <p>
-            We will now be exploring the social workers' portion of our two-pronged approach.
-          </p>
-        </div>
+<p>To systematically identify golfers' needs, we employed the Jobs-to-Be-Done (JTBD) framework, specifically the Job mapping technique outlined by Ulwick [T1].</p>
 
-        <div id="section-4-1-1-role-of-social-workers">
-          <h4>4.1.1. Role of Social Workers </h4>
-          <p>
-            According to the National Council of Social Services (NCSS), the role of a social worker is complex as they juggle many responsibilities, such as working with clients to set goals and develop case plans, facilitating access to resources and maintaining and submitting social reports, just to name a few [23]. 
-          </p>
-          <p>
-            We have broken it down to 3 key client-facing tasks they carry out to provide holistic care to the elderly:
-          </p>
-          <ol>
-            <li>Case work and counselling </li>
-            <li>Advocacy and resource linkage </li>
-            <li>Community development</li>
-          </ol>
-          <p>
-            For case work and counselling, they are required to provide end-to-end case management and support and an appropriate level of care through assessment, care planning and interventions. This step is further broken down [24], with key points such as: 
-          </p>
-          <ul>
-            <li>Establish rapport and build professional relationships </li>
-            <li>Identify issues related to the problem and gather relevant information from clients, and conduct needs
-              and intake assessment </li>
-            <li>Provide recommendations to modify case plans </li>
-            <li>Document and maintain case files and prepare reports </li>
-          </ul>
-          <p>
-            For advocacy and resource linkage, they act as middlemen to facilitate the flow of resources from other agencies and tap on community resources to provide intervention support for the clients. Social workers act on behalf of their clients in order to access needed resources, services or to influence policy change, which includes filing case reports. They have to liaise with agencies and make service referrals [25]. 
-          </p>
-          <p>
-            For community development, social workers are required to design, develop and implement community-specific development programmes after assessing the needs, while also participating in community development initiatives. They have to track outcomes from these initiatives and collect data as well.
-          </p>
-        </div>
+<p>Through structured interviews with golfers of varying levels and online sources [T2][T3], we mapped the core Job steps of a golfer into three phases: Think, Feel, and Play. Each reflects the cognitive, emotional, and physical stages through which a golfer progresses for each shot.</p>
 
-        <div id="section-4-1-2-current-gaps-faced">
-          <h4>4.1.2. Current Gaps faced by Social Workers</h4>
-          <p>
-            The scope of their job is incredibly wide, notwithstanding the fact that they usually handle dozens of cases simultaneously. An article published by CNA cites multiple social workers who are incredibly burnt out due to the workload. [26] For example, a crisis by one of the clients may require bringing 3 children to the hospital at 4 am, only for their workday to begin in 5 hours. It would be understandable that an industry veteran would be exhausted when pushed to their limits after several years. The article also talks about the excessive caseload a social worker faces, handling 30 to 50 cases at a given time. They also said: “These ‘excessive’ caseloads ‘directly hurt their ability to do a good job’, as they have less attention to give to each case.”
-          </p>
-          <p>
-            Each client also comes with their various admin tasks, as mentioned in the section on case work above. Social workers are also required to maintain these case files, often having to transcribe meetings with clients, which are incredibly time-consuming and tedious, on top of excessive paperwork. [26] Coupled with the massive number of clients they are required to handle, social workers are often overwhelmed by admin tasks.
-          </p>
-          <p>
-            Thus, the overwhelming workload due to high case load and tedious admin tasks is often cited as the key reason that impedes the ability of social workers to perform their best.
-          </p>
-          <p>
-            <u>Existing Solutions and the Gaps</u>
-          </p>
-          <p>
-            Current technology available includes ScribeAI, which Care Corner has piloted in partnership with Open Government Products, an AI-powered transcription tool that transcribes and summarises case sessions in real time. This has alleviated some of the heavy documentation burden, allowing the social workers to focus more on their client. However, from an interview with a social worker from Touch Community services, she mentioned that the system isn’t perfect as there is still a need to manually check and upload the summarized data.
-          </p>
-          <p>
-            Furthermore, the larger issue remains that a social worker is overwhelmed with 30-50 cases concurrently, making it hard to keep track of information and apply it during sessions appropriately.
-          </p>
-          <p>
-            Thus, our concepts are built around taking the cognitive load off the social workers, such that information could be prompted to them appropriately during a session, to allow them to focus more on building a connection with their clients. 
-          </p>
-        </div>
+<div id="image7">
+<image-component tag="final-img-7" source="assets/figure/final_image7.png" subtitle="" style="max-width: 900px;"></image-component>
+</div>
 
-        <div id="section-4-1-3-problem-statement-for-social-worker">
-          <h4>4.1.3. Problem Statement for Social Worker</h4>
-          <p>
-            Every week, social workers supporting the 223 Active Ageing Centres (AACs) in Singapore assist numerous different elderly in the neighbourhood with different circumstances and personalities [27]. With so many different personal circumstances, it is often difficult for the staff to provide personalised social assistance to the elderly. As a result, the need for creating personalised approaches significantly increases the complexity of the staff’s job scope, leaving them with less time to support the elderly.
-          </p>
-        </div>
+<p class="figure-caption"><em>Figure : Jobs steps Miro board (<a href="https://miro.com/app/board/uXjVJALfKrE=/?moveToWidget=3458764664096433169&cot=10">https://miro.com/app/board/uXjVJALfKrE=/?moveToWidget=3458764664096433169\&cot=10</a>)</em></p>
 
-        <div id="section-4-2-identifying-needs">
-          <h3>4.2. Identifying Needs and Desired Outcomes of Social Workers (Rex)</h3>
-          <image-component tag="fig-13" source="assets/figure/f13.png" style="max-width: 200px; width: 100%" subtitle="Figure 13: What customers want by Anthony Ulwick [28]"></image-component>
-          <p>
-            In this section, we will first explain how we broke down the job map, followed by how we found the desired outcomes, 
-            and lastly, how we developed concepts to address these <strong>desired and underserved outcomes</strong> of social workers using the outcome-driven 
-            innovation approach by Anthony Ulwick shown above [28]. 
-          </p>
-        </div>
+<image-component tag="final-img-8" source="assets/figure/final_image8.png" subtitle="" style="max-width: 900px;"></image-component>
 
-        <div id="section-4-2-1-why-outcome-driven-innovation">
-          <h4>4.2.1. Why the Outcome-Driven Innovation Approach?</h4>
-          <p>
-            The methodology was chosen because customer inputs and requirements can be <strong>vague</strong>. This is addressed by the <strong>outcome driven innovation approach</strong> (jobs to be done) because outcomes provide us with a set of metrics customers use to judge how well a job is done by a product. These metrics make possible the <strong>systematic and predictable</strong> creation of products and services [28, p,XXII].
-          </p>
-        </div>
+<p class="figure-caption"><em>Figure : Jobs Steps Miro Board</em></p>
 
-        <div id="section-4-2-2-job-map">
-          <h4>4.2.2. Job Map of Social Workers</h4>
-          <image-component tag="fig-14" source="assets/figure/f14.png"
-            subtitle="Figure 14: Job Map of a social worker visiting the Elderly"></image-component>
-          <p>
-            Our team mapped out a 12-step job map for social workers doing the job of visiting the elderly. The 5 key
-            steps are highlighted in red in the figure above.
-          </p>
-          <p>
-            From the job map, we identified a total of 36 outcomes [Refer to <a href="#appendix-c">Appendix C</a>].
-            Outcomes are <strong>measures of value</strong> that define how social workers want to get the job done and what they need
-            to get the job done perfectly [28, p.26].
-          </p>
-         </div>
+<p><strong>Think Box:</strong> This phase covers the pre-shot decision-making process, from assessing the lie of the ball through to visualising the intended shot and managing emotions before addressing the ball. This phase accounts for half of the job steps, indicating that the majority of a golfer's cognitive workload occurs before the club is ever swung. This aligns with existing literature that identifies pre-shot routines and decision-making as critical determinants of shot quality[T5].</p>
 
-        <div id="section-4-2-3-filtering-of-outcomes">
-          <h4>4.2.3. Filtering desired outcomes of social workers</h4>
-          <p>
-            In order to filter out the most desired outcomes, we consulted the social workers, and used the opportunity algorithm of <strong>“Opportunity = Importance +
-              max (importance - satisfaction, 0)”</strong> [28, p.45], and shortlisted the <strong>top 4 most
-              underserved outcomes</strong> for social workers, highlighted in yellow in the table below.
-          </p>
-          <p>
-            An outcome with high opportunity score represents a <strong>solid opportunity and underserved outcome</strong>, because it is something the social workers <strong>want to achieve</strong>, but are <strong>unable to achieve satisfactorily</strong> given the tools currently available to them [28, p.40].
-          </p>
-          <image-component tag="table-4" source="assets/table/t4.png"
-            subtitle="Table 4: Opportunity Scores of Shortlisted Outcomes"></image-component>
-        </div>
+<p><strong>Feel Box:</strong> This phase captures the transition from planning to execution, in which the golfer feels the intended swing, settles into a stance, fixates on the ball, and commits to the shot. This is where the quiet eye phenomenon is most active, as the golfer's final gaze fixation on the ball directly precedes motor execution.</p>
 
-        <div id="section-4-3-concept-exploration">
-          <h3>4.3. Concept Exploration for Underserved Outcomes of Social Workers (Rex)</h3>
-          <p>
-            Based on the <strong>top 4 underserved outcomes</strong>, 4 key concepts were then created.
-          </p>
-        </div>
+<p><strong>Play Box:</strong> This phase encompasses post-shot actions, observing the ball's trajectory, reflecting on the shot, and locating the ball. Although shorter, this phase is significant because it feeds back into the Think phase for the next shot, creating a learning loop.</p>
 
-        <div id="section-4-3-1-concepts-for-aiding">
-          <h4>4.3.1. Concepts for Aiding Social Workers</h4>
-          <image-component tag="fig-15" source="assets/figure/f15.png"
-            subtitle="Figure 15: 4 Key Concepts for Aiding Social Workers"></image-component>
-          <ol>
-            <li><strong>Fact assistant</strong>: A distraction-free prompter that is able to advise the social worker
-              on topics based on the known historical facts of the elderly. </li>
-            <li><strong>Personal assistant</strong>: An assistant that is able to summarise the important information
-              needed for reports post-interaction. </li>
-            <li><strong>Real-time coach</strong>: A coach that is able to advise the social worker on possible ways to
-              handle elderly people based on known historical behaviours or logged cases. </li>
-            <li><strong>Real-time Duolingo</strong>: A language coach that is able to advise social workers on basic
-              language terminologies and meanings based on their conversations.</li>
-          </ol>
-        </div>
+<div id="1.4-analysis-of-primary-research">
+  <h3>1.4 Analysis of Primary Research</h3>
+</div>
 
-        <div id="section-4-3-2-trade-off-analysis">
-          <h4>4.3.2. Trade-off Analysis </h4>
-          <p>
-            In order to decide which concept to prioritise, a trade-off analysis was carried out. Current solutions such as scribe AI, and pen and paper notes were also included to understand how it fares against the proposed concepts. 
-          </p>
-          <p>
-            4 key categories were chosen as shown in the table below. The bulk of weightage was allocated to the 4 underserved outcomes. Reduction of time required to do administrative reports was given a lower weightage because it has the lowest opportunity score among all 4 outcomes, as shown in Table 4 above.
-          </p>
-          <image-component tag="table-5" source="assets/table/t5.png" style="max-width: 800px; width: 100%"
-            subtitle="Table 5: Cross-evaluation Matrix for Concepts"></image-component>
-          <p>
-            For each criterion, a score of 5 was given to the concept which satisfied the criteria most, and 0 for the concept which satisfied the criteria least, as shown in Table 5 above. <strong>Fact Assistant</strong> had the highest overall score.
-          </p>
-        </div>
+<p>Using the 5 Whys technique, we drilled down into the underlying reasons for performance inconsistency, specifically focusing on the 'Think Phase' and 'Feel Phase' identified through the Job mapping in Section 1.3.</p>
 
-        <div id="section-4-4-critical-experience-prototype">
-          <h3>4.4. Critical Experience Prototype (CEP) (Rex)</h3>
-          <p>
-            Since Fact Assistant had the highest score, our team created a CEP to test the
-            Fact Assistant. Although the concept is for social workers, we used a befriender to gain quick insights
-            first.
-          </p>
-        </div>
+<div id="1.4.1-the-5-whys">
+  <h4>1.4.1 The 5 Whys</h4>
+</div>
 
-        <div id="section-4-4-1-formation-of-cep">
-          <h4>4.4.1. Formation of CEP </h4>
-          <p>
-            <strong>Objective:</strong> The objective was to see if timely facts about the elderly help with
-            conversational flow for a social worker. The test took 20 minutes.
-          </p>
-          <image-component tag="fig-16" source="assets/figure/f16.png"
-            subtitle="Figure 16: Pictorial Representation of Parties involved in CEP"></image-component>
-          <p>
-            <strong>Parties involved:</strong>
-          </p>
-          <ol>
-            <li><strong>The AI:</strong> The “AI” provides prompts through text messages, while referring to a fact
-              sheet. He listened to the conversation through earbuds so that he could send factual prompts according
-              to the conversation. </li>
-            <li><strong>The “social worker”:</strong> A befriender who role-played as a social worker. He referred to
-              an iPad for prompts while interacting. </li>
-            <li><strong>The elderly.</strong></li>
-          </ol>
-          <p>
-            An image of the fact sheet used can be found in <a href="#appendix-d">Appendix D</a>.
-          </p>
-          <p>
-            <strong>Post Test:</strong><br>
-            After the test, questionnaires were handed out to the participants.
-          </p>
-        </div>
+<p>Considering the complicated nature of golf, we split the 5 whys into 2 different branches - the think phase and the feel phase.</p>
 
-        <div id="section-4-4-2-results-of-cep">
-          <h4>4.4.2. Results of CEP </h4>
-          <image-component tag="table-6" source="assets/table/t6.png" subtitle="Table 6: Key Findings from CEP" style="max-width: 700px; width: 100%"></image-component>
-          <p>
-            The key findings are shown in Table 6 above. We found that 45% of prompts were converted to actual topics, and 18% led to enjoyable topics that made the elderly smile. This tells us that <strong>prompts can help facilitate conversation with the elderly.</strong> 
-          </p>
-          <p>
-            Furthermore, the “social worker” was able to achieve a talk ratio of 78% elderly, 22% himself, which is close to the benchmark of 70% patient and 30% talk ratio for therapists [29]. 
-          </p>
-          <image-component tag="table-7" source="assets/table/t7.png" style="max-width: 700px; width: 100%"
-            subtitle="Table 7: Prompts that led to enjoyable conversations"></image-component>
-          <p>
-            We also discovered that some prompts the elderly enjoy discussing can revolve around lotteries, and
-            their good old memories, seen in Table 7 above. Refer to <a href="#appendix-e">Appendix E</a>
-            for the prompts given.
-          </p>
-        </div>
+<p>Branch A - Think Phase chain:</p>
 
-        <div id="section-4-4-3-post-cep-questionnaire">
-          <h4>4.4.3. Post CEP Questionnaire Findings </h4>
-          <p>
-            In general, both the “social worker” and the elderly found the conversation smooth.
-          </p>
-          <p>
-            However, the “social worker” did mention that it was difficult to use the prompts in certain situations
-            because he could not link the prompt and the current conversation. Refer to <a href="#appendix-f">Appendix
-              F</a> for the questionnaire results.
-          </p>
-        </div>
+<ol>
+  <li>Because they sometimes make suboptimal decisions<br>&nbsp;&nbsp;&nbsp;Why do they make suboptimal decisions?</li>
+  <li>Because they need to mentally estimate multiple environment variables (wind, elevation, yardage, lie etc)<br>&nbsp;&nbsp;&nbsp;Why is estimation a problem?</li>
+  <li>Because golfers gather the data from multiple fragmented sources and mentally integrate them under pressure.<br>&nbsp;&nbsp;&nbsp;Why is data fragmented?</li>
+  <li>Because existing tools like rangefinders and GPS apps each provide isolated data points, requiring golfers to context-switch between devices and perform mental calculations<br>&nbsp;&nbsp;&nbsp;Why do they rely on feel</li>
+  <li>Because no current tool delivers integrated, real-time environmental data within the golfer's natural line of sight during their decision-making process</li>
+</ol>
 
-        <div id="section-4-4-4-conclusion-of-results">
-          <h4>4.4.4. Conclusion of Results</h4>
-          <p>
-            In conclusion, the results are promising and they show us that distraction-free factual prompts can aid the
-            “social worker” in generating topics for the conversation, and could even potentially lead to enjoyable
-            topics. This directly addresses the respective underserved outcomes.
-          </p>
-          <ol>
-            <li>Increase the number of topics that can be talked about with the elderly so that visits are more
-              conversational. </li>
-            <li>Increase the confidence of the social worker when dealing with the elderly</li>
-          </ol>
-        </div>
+<p>Branch B - Feel Phase chain:</p>
 
-        <div id="section-4-4-5-shortcomings-of-results">
-          <h4>4.4.5. Shortcomings of Results</h4>
-          <p>
-            However, there are some important limitations to note.
-          </p>
-          <ol>
-            <li>Firstly, the sample size tested is too small. We only conducted it on 1 “social worker” and 1 elderly.
-              The small sample size cannot represent the experience of the larger population of elderly and social
-              workers. </li>
-            <li>Secondly, the tester of our CEP is not the same as the user of our product. The users of our product
-              are meant to be social workers in the elderly field. </li>
-            <li>Lastly, although the elderly and the “social worker” are strangers, they know the observer mutually. As
-              a result, the elderly would be less inclined to feel tense because the mutual relationship already helps
-              to establish some form of rapport.</li>
-          </ol>
-        </div>
+<ol>
+  <li>Because they sometimes fail to execute a shot they are capable of making<br>&nbsp;&nbsp;&nbsp;Why do they choke?</li>
+  <li>Because their attentional state at the moment of setup and swing is inconsistent. - Our JTBD research showed golfers rate “minimizing overthinking”; “maximizing focusing on controllables”; “maximizing focus duration” as high importance, underserved needs.<br>&nbsp;&nbsp;&nbsp;Why is it inconsistent</li>
+  <li>Because focus can be disrupted by pressure, distractions or unstructured pre shot routines and a golfer may not have realised it until after a poor shot<br>&nbsp;&nbsp;&nbsp;Why don’t they realise?</li>
+  <li>Because attentional focus is an internal cognitive state with no external indicator - a golfer cannot objectively self-assess whether they are in the zone.<br>&nbsp;&nbsp;&nbsp;Why isn't there</li>
+  <li>Because no accessible tool provides real time gaze based focus feedback that golfers can use to confirm their attentional readiness.</li>
+</ol>
 
-        <div id="section-4-5-future-refinement">
-          <h3>4.5. Future Refinement of Concepts for Social Workers (Rex)</h3>
-          <image-component tag="fig-17" source="assets/figure/f17.png"
-            subtitle="Figure 17: Refinement of Concepts"></image-component>
-          <p>
-            To address the downside where the user found it hard to draw connections between the current conversation
-            and the fact, we propose combining the Fact Assistant and Real Time Coach concepts to address this. Since
-            the Fact Assistant only provides the user with the <strong>what</strong>, the Real Time Coach can
-            complement it by providing the <strong>how</strong>, which helps the user to connect the dots.
-          </p>
-        </div>
+<p>The execution of both 5 Whys branches successfully converged on two fundamental, unaddressed root causes that define the scope of our proposed solution.</p>
 
-        <div id="section-4-6-next-steps">
-          <h3>4.6. Next Steps for Social Workers (Rex)</h3>
-          <p>
-            Our next steps would be to further validate the findings of the Fact Assistant concept by doing the
-            following:
-          </p>
-          <ol>
-            <li>Firstly, to validate our results, we would need to increase our sample size. </li>
-            <li>Secondly, we should now test the Fact Assistant concept on actual social workers. This would give us a
-              more accurate representation. </li>
-            <li>Lastly, to reduce the biasness of our tests, it would be important to test them on strangers.</li>
-          </ol>
-        </div>
+<p>From both branches of 5 whys, we were able to establish the 2 root causes.</p>
 
-        <div id="section-5-conclusion">
-          <h2>5. Conclusion (All)</h2>
-          <image-component tag="fig-18-conclusion" source="assets/figure/f18.png" style="max-width: 300px; width: 100%"
-            subtitle="Figure 18: Two-pronged Approach"></image-component>
-          <p>
-            In conclusion, our two-pronged approach aims to alleviate the elderly loneliness problem through the
-            elderly and the social workers.
-          </p>
-          <p>
-            Our findings indicate that elderly users are generally receptive to AI companions, particularly when interactions are consistent, empathetic, and easy to access. The AI companion shows strong potential to address the limitations of current befriending models by offering scalable, on-demand emotional support. Thereby alleviating pressure on human volunteers and social infrastructure. A key milestone in the next phase of development will be the creation of a culturally attuned "Singaporean AI" to enhance relatability and user trust.
-          </p>
-          <p>
-            For the social workers, we discovered that real time prompts have the potential to boost social worker interactions with the elderly. It is especially useful when the prompts are relevant to the hobbies or interests of the elderly. 
-          </p>
-          <p>
-            Moving forward, more testing and a combination of concepts for both approaches are required to further
-            validate our interim findings.
-          </p>
-        </div>
+<ol>
+  <li>Think branch<br>&nbsp;&nbsp;&nbsp;Because no current tool delivers integrated, real-time environmental data within the golfer's natural line of sight during their decision-making process</li>
+  <li>Feel branch<br>&nbsp;&nbsp;&nbsp;Because no accessible tool provides real time gaze based focus feedback that golfers can use to confirm their attentional readiness.</li>
+</ol>
 
-        <div id="section-6-future-plans">
-          <h2>6. Future Plans for the Project (Rex)</h2>
-          <p>
-            After diving deeper into the concepts of each user group to tackle the central problem of elderly loneliness, our next step is to work on addressing the shortfalls of our two-pronged approach. We will consolidate our findings and align our direction with the Stanford team to develop a solution that addresses a critical need.
-          </p>
-        </div>
+<p>1.4.2 Measure opportunity using all the outcome statements to find desired outcomes</p>
 
-        <div id="section-6-1-project-gantt-chart">
-          <h3>6.1. Project Gantt Chart</h3>
-          <p>
-            Moving forward, our project will be split into 3 main phases
-          </p>
-          <ol>
-            <li>Problem exploration phase </li>
-            <li>Solution exploration phase </li>
-            <li>Functional prototype phase</li>
-          </ol>
-          <p>
-            Our plan for the weeks ahead can be observed in the Gantt chart below.
-          </p>
-          <image-component tag="fig-19" source="assets/figure/f19.png" style="max-width: 900px; width: 100%"
-            subtitle="Figure 19: Project Gantt Chart"></image-component>
-        </div>
+<p>To prioritise which outcomes to address, each outcome statement was scored using the Outcome-Driven Innovation (ODI) opportunity algorithm as defined by Ulwick [T1]: Opportunity Score \= Importance \+ MAX(Importance − Satisfaction, 0).</p>
 
-        <div id="references" class="references">
-          <sl-divider></sl-divider>
-          <h2>7. References</h2>
-          <ul>
-            <li>
-              [1] S. Johnson, ‘WHO declares loneliness a “global public health concern”’, The Guardian, The Guardian,
-              16-Nov-2023.
-            </li>
-            <li>
-              [2] Department for Digital, Culture, Media &amp; Sport, ‘Joint message from the UK and Japanese
-              Loneliness Ministers’, GOV.UK, 17-Jun-2021. [Online]. Available:
-              https://www.gov.uk/government/news/joint-message-from-the-uk-and-japanese-loneliness-ministers.
-              [Accessed: 27-Oct-2025].
-            </li>
-            <li>
-              [3] IpsSg and I. Spyouth, Edu.sg, 2024. [Online]. Available:
-              https://lkyspp.nus.edu.sg/docs/default-source/ips/findings-from-sp2024-pre-conference-poll.pdf.
-              [Accessed: 26-Oct-2025].
-            </li>
-            <li>
-              [4] R. Zhaoyang, K. D. Harrington, S. B. Scott, J. E. Graham-Engeland, and M. J. Sliwinski, “Daily social
-              interactions and momentary loneliness: The role of trait loneliness and neuroticism,” The Journals of
-              Gerontology: Series B, vol. 77, no. 10, pp. 1791–1802, Jun. 2022. doi:10.1093/geronb/gbac083
-            </li>
-            <li>
-              [5] M. Puyané, C. Chabrera, E. Camón, and E. Cabrera, “Uncovering the impact of loneliness in ageing
-              populations: A comprehensive scoping review,” BMC Geriatrics, vol. 25, no. 1, Apr. 2025.
-              doi:10.1186/s12877-025-05846-4
-            </li>
-            <li>
-              [6] “Ageing and health,” World Health Organization,
-              https://www.who.int/news-room/fact-sheets/detail/ageing-and-health [accessed Nov. 4, 2025].
-            </li>
-            <li>
-              [7] C. M. Chua, J. Y. Chua, and S. Shorey, “Effectiveness of home-based interventions in improving
-              loneliness and social connectedness among older adults: A systematic review and meta-analysis,” Aging
-              &amp; Mental Health, vol. 28, no. 1, pp. 1–10, Jul. 2023. doi:10.1080/13607863.2023.2237919
-            </li>
-            <li>
-              [8] R. Hacihasanoğlu, A. Yildirim, and P. Karakurt, “Loneliness in elderly individuals, level of
-              dependence in activities of daily living (ADL) and influential factors,” Archives of Gerontology and
-              Geriatrics, vol. 54, no. 1, pp. 61–66, Jan. 2012. doi:10.1016/j.archger.2011.03.011
-            </li>
-            <li>
-              [9] World Health Organization, "Active Ageing: A Policy Framework," Geneva, Switzerland: WHO, 2002.
-            </li>
-            <li>
-              [10] J. Siette et al., "The impact of befriending on social isolation and loneliness: A systematic
-              review," Health & Social Care in the Community, vol. 25, no. 3, pp. 826-848, May 2017. DOI:
-              10.1111/hsc.12361.
-            </li>
-            <li>
-              [11] Agency for Integrated Care, "About the Silver Generation Office," AIC Singapore. [Online]. Available:
-              https://www.aic.sg/sgo. [Accessed: Oct. 29, 2025].
-            </li>
-            <li>
-              [12] People's Association, "Engaging Our Seniors," Government of Singapore. [Online]. Available:
-              https://www.pa.gov.sg/our-programmes/community-group-interest/engaging-our-seniors/. [Accessed: Oct. 29,
-              2025].
-            </li>
-            <li>
-              [13] Chin, Soo Fang, and Judith Tan. “The Problem with Being Alone: Social Isolation, Loneliness Biggest
-              Enemy for Seniors in S’pore.” The Straits Times, 2 Dec. 2023,
-              www.straitstimes.com/singapore/all-the-lonely-people-tackling-social-isolation-among-older-singaporeans.
-            </li>
-            <li>
-              [14] Grey, Hannah. “A Guide to Elderly Befriending Services in Singapore.” Homage,
-              www.homage.sg/resources/befrienders/.
-            </li>
-            <li>
-              [15] Lin, Cheryl. “Volunteers Wanted: Charities Face Manpower Crunch While Beneficiaries Increase.” CNA,
-              25 June 2021,
-              www.channelnewsasia.com/singapore/charities-need-more-volunteers-covid-19-more-beneficiaries-2000336.
-            </li>
-            <li>
-              [16] THE MECHANISMS of in SINGAPORE: ELDERLY-BEFRIENDING.
-            </li>
-            <li>
-              [17] Fakoya, Olujoke A., et al. “How Do Befriending Interventions Alleviate Loneliness and Social
-              Isolation among Older People? A Realist Evaluation Study.” PLOS ONE, vol. 16, no. 9, 9 Sept. 2021, p.
-              e0256900, journals.plos.org/plosone/article?id=10.1371/journal.pone.0256900,
-              https://doi.org/10.1371/journal.pone.0256900.
-            </li>
-            <li>
-              [18] K. Al Mazroui and M. Alzyoudi, “The role of ChatGPT in mitigating loneliness among older adults: An
-              exploratory study,” Online Journal of Communication and Media Technologies, vol. 14, no. 4, p. e202444,
-              Oct. 2024, doi: https://doi.org/10.30935/ojcmt/14777.
-            </li>
-            <li>
-              [19] G. Chen and R. Spaulding, “The Impact of AI-Powered Alexa Assistant on Loneliness in Homebound Older
-              Adults: A Pilot Study,” Advances in Geriatric Medicine and Research, vol. 7, no. 1, Mar. 2025, doi:
-              https://doi.org/10.20900/agmr20250003.
-            </li>
-            <li>
-              [20] E. Broadbent et al., “ElliQ, an AI-Driven Social Robot to Alleviate Loneliness: Progress and Lessons
-              Learned,” JAR life, vol. 13, Jan. 2024, doi: https://doi.org/10.14283/jarlife.2024.2.
-            </li>
-            <li>
-              [21] M. M. Hasan, P. Knight, M. H. Tania, A. K. Bitto, A. Das, and H. Punja, “A Novel Framework for
-              Co-designing of An Artificial Intelligence Based Television-enabled Application to Address Social
-              Isolation and Alleviating Loneliness for Older People,” IEEE Xplore, Dec. 01, 2022.
-              https://ieeexplore.ieee.org/document/10029400 [accessed May 19, 2023].
-            </li>
-            <li>
-              [22] “RUNNING A BEFRIENDING SERVICE The Good Practice Guide.” Accessed: Nov. 04, 2025. [Online].
-              Available:
-              https://befriending.co.uk/wp-content/uploads/2024/06/GPG_-Running-a-Befriending-Service-2024.pdf?
-            </li>
-            <li>
-              [23] “Social work,” National Council of Social Service,
-              https://www.ncss.gov.sg/careers/social-service-careers/roles-in-social-services/social-work/ [accessed
-              Nov. 5, 2025].
-            </li>
-            <li>
-              [24] National Social Work Competency Framework,
-              https://ctic.nus.edu.sg/living-well-digitally/national-social-work-competency-framework/ [accessed Nov.
-              12, 2025].
-            </li>
-            <li>
-              [25] “Social work,” National Council of Social Service,
-              https://www.ncss.gov.sg/careers/social-service-careers/roles-in-social-services/social-work [accessed
-              Nov. 12, 2025].
-            </li>
-            <li>
-              [26] G. Yeoh, “Back-to-back crises, days that end at 4am: Why some social workers in Singapore are burning
-              out,” CNA,
-              https://www.channelnewsasia.com/singapore/social-workers-burnout-job-hours-passion-2553816 [accessed
-              Nov. 5, 2025].
-            </li>
-            <li>
-              [27]Age Well SG, “ActiveAgeing,” www.agewell.gov.sg. https://www.agewell.sg/active-ageing/
-            </li>
-            <li>
-              [28] A. Ulwick, What Customers Want: Using outcome-driven innovation to create breakthrough products and
-              services. McGraw Hill, 2005.
-            </li>
-            <li>
-              [29] Seedling Mentors, “Essential Listening Tips | Seedling Mentor Program,” Seedlingmentors.org, 2024.
-              https://www.seedlingmentors.org/essential-listening-tips/
-            </li>
-            <li>
-              [30]	‘(PDF) Design Innovation Methodology Handbook - 2nd Edition’, ResearchGate. [Online]. 
-              Available: 
-              https://www.researchgate.net/profile/Kristin-Wood-2/publication/373897951_Design_Innovation_Methodology_Handbook_-_2nd_Edition/links/65020bb38d6da36cc877d91d/Design-Innovation-Methodology-Handbook-2nd-Edition.pdf. [Accessed: 15-Nov-2025]. 
-            </li>
-          </ul>
-        </div>
+<p><strong>Focus-driven Execution improvement</strong></p>
 
-        <div id="appendix-a">
-          <sl-divider></sl-divider>
-          <h2>Appendix A</h2>
-          <p>Project prompt </p>
-          <image-component tag="appendix-a-img" source="assets/appendix/AA.jpg"
-            subtitle="Project Prompt"></image-component>
-        </div>
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Outcome Statement</th>
+    <th>Adam</th>
+    <th>Dom</th>
+    <th>Nicholas</th>
+    <th>Onn</th>
+    <th>Lucas</th>
+  </tr>
+  <tr>
+    <td>Minimise the likelihood of hitting a shank</td>
+    <td>7</td>
+    <td>7</td>
+    <td>9</td>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Minimize the likelihood of being nervous</td>
+    <td>5</td>
+    <td>-</td>
+    <td>8</td>
+    <td>6</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Increase the likelihood of reproducing the desirable swing</td>
+    <td>7</td>
+    <td>-</td>
+    <td>9</td>
+    <td>6</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Increase the likelihood of visualizing shot correctly</td>
+    <td>7</td>
+    <td>5</td>
+    <td>7</td>
+    <td>5</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Minimize the risk of hitting the ball fat/thin</td>
+    <td>5</td>
+    <td>-</td>
+    <td>8</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table></div>
 
-        <div id="appendix-b">
-          <sl-divider></sl-divider>
-          <h2>Appendix B</h2>
-          <p>Observation from Befriender at Your Service Critical Function Prototyping</p>
+<p><strong>Course Intelligence</strong></p>
 
-          <table-component subtitle="Qualitative Observations">
-            <div id="table-appendix-b"></div>
-          </table-component>
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Outcome Statement</th>
+    <th>Adam</th>
+    <th>Dom</th>
+    <th>Nicholas</th>
+    <th>ONN</th>
+    <th>Lucas</th>
+  </tr>
+  <tr>
+    <td>Maximise the likelihood of calculating the best shot (temp, humidity, elevation, wind)</td>
+    <td>5</td>
+    <td>7</td>
+    <td>-</td>
+    <td>8</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Maximise the accuracy of choosing the right club</td>
+    <td>7</td>
+    <td>6</td>
+    <td>8</td>
+    <td>6</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Minimise the number of times the ball lands in hazard zones</td>
+    <td>7</td>
+    <td>8</td>
+    <td>8</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Increase the likelihood of accurate ground yardage</td>
+    <td>6</td>
+    <td>6</td>
+    <td>7</td>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Minimise yardage errors due to lack of  experience</td>
+    <td>7</td>
+    <td>3</td>
+    <td>6</td>
+    <td>7</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Misjudging elevation due to optical illusions</td>
+    <td>6</td>
+    <td>4</td>
+    <td>5</td>
+    <td>5</td>
+    <td>-</td>
+  </tr>
+</table></div>
 
-        </div>
+<div id="1.5-secondary-research">
+  <h3>1.5 Secondary Research</h3>
+</div>
 
-        <div id="appendix-c">
-          <sl-divider></sl-divider>
-          <h2>Appendix C</h2>
-          <p>All outcomes from the job map. Go back to the report <a href="#section-4-2-2-job-map">here</a>. </p>
-          <image-component tag="appendix-c-img1" source="assets/appendix/AC.png" style="max-width: 800px; width: 100%"
-            subtitle="Outcomes from job map (1)"></image-component>
-          <image-component tag="appendix-c-img2" source="assets/appendix/AC_2.png" style="max-width: 800px; width: 100%"
-            subtitle="Outcomes from job map (2)"></image-component>
-        </div>
+<p>This literature review serves to validate the core problems and root causes established in the preceding primary research analysis, highlighting three overlapping challenges that set our product apart from competitors.</p>
 
-        <div id="appendix-d">
-          <sl-divider></sl-divider>
-          <h2>Appendix D</h2>
-          <p>Fact sheet used for CEP. Go back to the report <a href="#section-4-4-1-formation-of-cep">here</a>.
-          </p>
-          <image-component tag="appendix-d-img" source="assets/appendix/AD.png"
-            subtitle="Fact sheet for CEP"></image-component>
-        </div>
+<div id="1.5.1-inaccurate-playing-yardage">
+  <h4>1.5.1 Inaccurate Playing Yardage</h4>
+</div>
 
-        <div id="appendix-e">
-          <sl-divider></sl-divider>
-          <h2>Appendix E</h2>
-          <p>Prompts provided for social worker CEP. Go back to the report <a
-              href="#section-4-4-2-results-of-cep">here</a>.</p>
-          <ol>
-            <li>Prompts provided</li>
-          </ol>
-          <image-component tag="appendix-e-img1" source="assets/appendix/AE.png" style="max-width: 800px; width: 100%"
-            subtitle="Prompts provided"></image-component>
-          <ol start="2">
-            <li>Proportion of time the elderly talked</li>
-          </ol>
-          <image-component tag="appendix-e-img2" source="assets/appendix/AE_2.png" style="max-width: 400px; width: 100%"
-            subtitle="Proportion of talk time"></image-component>
-        </div>
+<p>Inaccurate playing yardage estimation, crucial for cutting strokes, is complicated by environmental factors (wind, temperature, humidity, altitude) that most golfers ignore or vaguely estimate. While a common coaching approach suggests a simple wind-distance percentage [m6], this method overlooks individual trajectory and spin sensitivity, as well as the asymmetrical effect of wind direction [m7]. Research confirms that low confidence in yardage calculations leads to club selection hesitation and poor shot execution [m8], highlighting the need for real-time, integrated environmental data.</p>
 
-        <div id="appendix-f">
-          <sl-divider></sl-divider>
-          <h2>Appendix F</h2>
-          <p>Questionnaire provided to the “Social Worker” and the elderly post CEP. Go back to the report <a
-              href="#section-4-4-3-post-cep-questionnaire">here</a>.</p>
-          <p>Questionnaire Results for “Social Worker” on Social Worker CEP </p>
-          <image-component tag="appendix-f-img1" source="assets/appendix/AF.png" style="max-width: 800px; width: 100%"
-            subtitle="Questionnaire Results for “Social Worker” (1)"></image-component>
-          <image-component tag="appendix-f-img2" source="assets/appendix/AF_2.png" style="max-width: 800px; width: 100%"
-            subtitle="Questionnaire Results for “Social Worker” (2)"></image-component>
-          <p>Questionnaire Results for the Elderly on Social Worker CEP </p>
-          <image-component tag="appendix-f-img3" source="assets/appendix/AF_3.png" style="max-width: 800px; width: 100%"
-            subtitle="Questionnaire Results for the Elderly (1)"></image-component>
-          <image-component tag="appendix-f-img4" source="assets/appendix/AF_4.png" style="max-width: 800px; width: 100%"
-            subtitle="Questionnaire Results for the Elderly (2)"></image-component>
-        </div>
-        <div id="appendix-g">
-          <sl-divider></sl-divider>
-          <h2>Appendix G</h2>
-          <table-component subtitle="">
-            <div id="table-needs-statements"></div>
-          </table-component>
-        </div>
+<div id="1.5.2-inaccessibility-to-professionals">
+  <h4>1.5.2 Inaccessibility to Professionals</h4>
+</div>
+
+<p>Access to professional guidance is expensive and scarce. Only 9% of U.S. golf courses offer caddie services, and only 5% of golfers use them [m9], costing an average of $113 USD per bag—a recurring barrier for recreational players. Coaching sessions are similarly costly and time-constrained. This market gap confirms the salient unmet need for affordable, personalized feedback during actual play.</p>
+
+<div id="1.5.3-unaddressed-mental-dimension">
+  <h4>1.5.3 Unaddressed Mental Dimension</h4>
+</div>
+
+<p>Lastly, the mental dimension of attentional control and focus is underserved by current tools. Traditional verbal coaching to "focus on the ball" is generalized and open-loop, offering no specific, quantifiable feedback. Research validates the Quiet Eye (QE) phenomenon as a reliable performance predictor [m5], showing that QE training improves putting accuracy under pressure while reducing anxiety [m10]. Despite evidence that QE training can shave 1.9 putts per round [m5], no accessible product provides real-time QE feedback to golfers during play.</p>
+
+<p>The current competitive landscape is highly segmented, failing to offer a single integrated solution. Direct competitors like rangefinders and GPS watches provide raw distance but lack real-time environmental adjustments and contextual data within the golfer’s natural line of sight. Professional caddie services and coaching address complex decision-making and mental training but remain costly and inaccessible to most recreational players. Our solution fuses these two disparate functions—environmental intelligence and objective, real-time attentional feedback via Quiet Eye—into a hands-free AR platform, creating a distinct competitive advantage.</p>
+
+<div id="1.6-value-proposition">
+  <h3>1.6 Value Proposition</h3>
+</div>
+
+<p>Based on the synthesis of primary research, the 5 Whys analysis, and the market gaps validated by the secondary research and competitor analysis, we now formalize our solution's positioning. To validate that our products effectively address the root causes of the Think and Feel phases, we applied the Value Proposition Canvas framework. This methodology maps the customer profile's jobs, pains, and gains (right side) against our product’s value map (left side), which details the pain relievers and gain creators designed to deliver our distinct competitive advantage.</p>
+
+<image-component tag="final-img-9" source="assets/figure/final_image9.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<div id="1.6.1-customer-profile">
+  <h4>1.6.1 Customer Profile</h4>
+</div>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Customer Jobs</th>
+    <th>Estimate playing yardage with higher accuracy, while accounting for environmental conditions Select the appropriate clubs for each shot Maintain focus and enhance attentional control before and during shot Improve golf score by reducing strokes Track performance over time to identify weaknesses and improve performance Enjoy the game with minimal frustration</th>
+  </tr>
+  <tr>
+    <td>Pains</td>
+    <td>Inaccurate mental yardage calculations lead to over or under clubbing  Lack of access to caddie services; only 9% of courses offer caddie services  Coaching is expensive and time-limited Unable to identify personal limitations, especially in attentional control, such as when quiet eye duration drops below optimal threshold Decision fatigue and stress under pressure, which affects their performance, especially at critical shots Bad shots might negatively affect mood and performance for the rest of the game Existing tools (eg rangefinders, GPS watch) only give raw distances with no accounting for environment conditions No objective feedback on mental training (eg focus quality) Using phone apps or external devices break focus and flow during pre-shot, adding time and disruptions Incompatibility with coach or caddie, which affects overall play</td>
+  </tr>
+  <tr>
+    <td>Gains</td>
+    <td>Confidence in club selection Access to caddie-level advice while minimising cost Real-time feedback on attentional control, which allows for correction before next shot Reducing score variability and improving handicap Better emotional regulation  Objective post-round data review and feedback Maximise enjoyments and minimise frustration</td>
+  </tr>
+</table></div>
+
+<div id="1.6.2-value-map">
+  <h4>1.6.2 Value Map</h4>
+</div>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Product and Services</th>
+    <th>Provision of real time data  Playing yardage calculator that accounts for environment conditions Eye tracking module measuring quiet eye duration before shot Automatically updated weather panel LLM-powered AI caddie that helps with club selection and shot strategy Verbal input, providing hands-free experience Personalised coaching feedback on-demand based on collected quiet eye and shot data from memory</th>
+  </tr>
+  <tr>
+    <td>Pain Relievers</td>
+    <td>Eliminates the need for mental calculation of playing yardage to account for environment conditions Removes asymmetry of headwind and tailwind in calculations Makes quiet eye data visible, allowing golfers to self-correct their fixation Replaces the recurring fee of caddies and coaches, removing the barrier to access expert guidance Reduces decision fatigue during play, such as club selection and shot strategy Reduces stress under pressure, as quiet eye feedback helps with focus and AI provides guidance</td>
+  </tr>
+  <tr>
+    <td>Gain Creators</td>
+    <td>Makes tour-level environmental data more accessible, when it was previously only available to professionals with trained caddies Trains attentional control and focus in the background while they play, acting as an additional mental coach Enables golfers to build personalised distance and clubs used data over time  Creates hands-free experience, where information appears conveniently in the line of sight, without disrupting pre-shot routine AI caddie receives input from play and corrects them or provides recommendations based on individual tendencies Provide post-round analytics to help users improve their game Bridges disconnect from lessons to course, allows coaching during actual play Accelerates handicap improvement by optimising club selection, shot strategy and attentional control  Increases enjoyment and confidence</td>
+  </tr>
+</table></div>
+
+<div id="1.7-problem-statement">
+  <h3>1.7 Problem Statement</h3>
+</div>
+
+<p>Recreational golfers face performance inconsistency because existing tools fail to provide two critical needs: integrated, real-time environmental data for accurate playing yardage, and objective, gaze-based feedback on attentional focus (Quiet Eye). This fragmentation and lack of a hands-free, heads-up solution disrupts the pre-shot routine, preventing amateurs from mastering the mental and environmental complexities of the game.</p>
+
+<p>Our project develops an Augmented Reality (AR) heads-up display (HUD) and AI caddie to solve performance inconsistency among recreational golfers by fusing two previously fragmented needs into a hands-free platform: delivering real-time, environment-adjusted playing yardage (Course Intelligence) and providing objective, gaze-based feedback on attentional control (Quiet Eye).</p>
+
+<div id="1.8-project-boundary">
+  <h3>1.8 Project Boundary</h3>
+</div>
+
+<p>The scope of this project is confined to the 'Think Box' and 'Feel Box' phases of the golfer's workflow, as defined in the primary research. Specifically, the technical development focuses on delivering 'Course Intelligence' within the Think Box and enhancing 'Attentional Control' within the Feel Box via gaze-based Quiet Eye feedback. While the 'Play Box' (post-shot analysis and learning loops) remains a critical component of the overall golfer journey, it is formally deferred to future iterations of the platform. Adhering to the collaborative mandate with Meta, the implementation is strictly constrained to the smart glasses form factor.</p>
+
+<image-component tag="final-img-10" source="assets/figure/final_image10.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<div id="1.9-design-specifications">
+  <h3>1.9 Design Specifications</h3>
+</div>
+
+<p>(Detailed technical requirements (e.g., eye-tracking latency, HUD transparency, weight) that are "well justified" to meet project goals.)</p>
+
+<image-component tag="final-img-11" source="assets/figure/final_image11.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p>From the primary interview with the golfers, we are able to generate the user needs and system requirements.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>User Need (Based on JTBD/Value Proposition)</th>
+    <th>Operational Requirement</th>
+    <th>Performance Requirements</th>
+  </tr>
+  <tr>
+    <td>UR1. The golfer needs <strong>consolidated, real-time course intelligence</strong> (yardage, wind, elevation) delivered within their natural line of sight.</td>
+    <td>OR1. The system shall automatically inform the golfer of the environmental data (wind, elevation, temperature, humidity) and calculate an adjusted "Playing Yardage" based on the data.</td>
+    <td>PR1. The system shall provide localised environmental data with a minimum sampling frequency of one every 1 minute.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>PR2. The system shall provide an accurate yardage calculation within 5 meters.</td>
+  </tr>
+  <tr>
+    <td>UR2. The golfer needs <strong>real-time gaze-based focus feedback</strong> to confirm mental readiness before a shot.</td>
+    <td>OR2. The system shall capture and process key gaze metrics, including Quiet Eye duration and fixation patterns.</td>
+    <td>PR3. The system must support accurate Gaze tracking with an accuracy of up to 2°.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>PR4. The sensor must provide access to raw eye-tracking data for AI integration.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>OR3. The system shall provide feedback based on the gaze metrics of the golfer’s focus and readiness before a shot.</td>
+    <td>PR5. The system shall provide feedback on the golfer’s focus within 5 seconds of taking a shot.</td>
+  </tr>
+  <tr>
+    <td>UR3. The golfer needs the system to <strong>minimize cognitive load and external distraction</strong> during the pre-shot routine to maintain a consistent attentional state.</td>
+    <td>OR4. The system shall automatically remove the information when the golfer gets ready to take a shot.</td>
+    <td>PR6. The system shall remove all information within 1 second of detecting the golfer ready to take a shot.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>OR5. The system must be lightweight and comfortable for use over an extended period.</td>
+    <td>PR7. The weight of the system shall be less than 200g.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>OR6. The hardware must be compatible with standard golf attire and designed for on-course use.</td>
+    <td>PR8. The system shall be IP67 rated.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>PR9. The system shall operate continuously for a minimum of 3 hours without charging.</td>
+  </tr>
+  <tr>
+    <td>UR4. The golfer needs an <strong>accessible, integrated assistant</strong> that combines gaze training and course intelligence to provide insights to improve execution instantly.</td>
+    <td>OR7. The system shall provide autonomous, real-time club selection and execution recommendations based on fused Quiet Eye and Course data.</td>
+    <td>PR10. The system shall provide recommended club selection and execution within 5 seconds of inquiry by the golfer.</td>
+  </tr>
+</table></div>
+
+<div id="2.-concept-development">
+  <h2>2. Concept Development</h2>
+</div>
+
+<p>Based on the system requirements mentioned in section 1.6, we formed three major subsystems to enable our GolfVision: Hardware Subsystem, Application Subsystem and Backend Software Subsystem. The Hardware Subsystem will focus on collecting the gaze information from the user and relaying the information to the user. The Application Subsystem will focus on the user interface. Finally, the Backend Software Subsystem will focus on creating an AI caddie that will integrate the environmental data and gaze data to provide relevant insights that the golfers can use to improve their putting experience.</p>
+
+<div id="2.1-design-selection-for-information-relay">
+  <h3>2.1 Design Selection for Information Relay</h3>
+</div>
+
+<p>The first major design decision for the Hardware Subsystem was selecting the mode of feedback: Visual or Audio. We chose a visual Heads-Up Display (HUD) approach based on the comparative analysis below.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Design</th>
+    <th>Pros</th>
+    <th>Cons</th>
+  </tr>
+  <tr>
+    <td><strong>Visual</strong></td>
+    <td>1. Information is always available 2. Golfers can refer to the information quickly 3. Information can be presented concisely</td>
+    <td>1. Risk of visual obstruction or distraction during the critical execution phase 2. Visibility concerns under direct, harsh sunlight</td>
+  </tr>
+  <tr>
+    <td><strong>Audio</strong></td>
+    <td>1. Minimal interference with the golfer's vision 2. Maintains gaze-action coupling by eliminating visual distraction during the swing</td>
+    <td>1. Transient information that cannot be easily referred back to 2. Not suitable for continuous monitoring of complex numerical data (e.g., detailed yardage tables) 3. Potential for auditory distraction to the golfer or other players</td>
+  </tr>
+</table></div>
+
+<p>The visual HUD was selected as the optimal relay method based on human factors principles of cognitive workload and attentional focus. Unlike audio feedback, which is transient and requires high levels of auditory processing that can conflict with a golfer's internal dialogue, the HUD integrates complex, multi-modal data—including shifting environmental variables and millisecond-level Quiet Eye metrics—directly into the user's natural line of sight. This design alignment fulfills UR3 by minimizing the cognitive load required to access and mentally integrate disparate data points. By placing actionable intelligence within the primary visual field, the system ensures that golfers can verify their attentional readiness and course conditions without disrupting the flow of their critical pre-shot routine or breaking gaze-action coupling.</p>
+
+<div id="2.2.-technology-selection-for-the-hardware-subsystem">
+  <h3>2.2. Technology Selection for the Hardware Subsystem</h3>
+</div>
+
+<p>Following the selection of a visual design for information relay, the next step was to select the specific hardware components for the display and the eye tracking system. The goal was to ensure a high sampling rate for accurate gaze measurement and a lightweight, bright display suitable for outdoor use.</p>
+
+<p><strong>Comparative Analysis of Hardware</strong></p>
+
+<p>The table below compares the leading options for the two critical components: the Eye Tracking Sensor and the Visual Display.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Components</th>
+    <th>Option 1</th>
+    <th>Option 2</th>
+    <th>Option 3</th>
+  </tr>
+  <tr>
+    <td><strong>Eye Tracking Module</strong></td>
+    <td>Pupil Labs Bare Metal [J5] <image-component tag="final-img-12" source="assets/figure/final_image12.png" subtitle="" style="max-width: 900px;"></image-component> Sampling Rate: 200Hz Accuracy: 1.2° Weight: 7.3g Data Collected: Gaze point, head pose, pupillometry data, eye state, eye position, eye orientation, pupil diameter, fixation, blink</td>
+    <td>HoloLens 2 [J2, J4] <image-component tag="final-img-13" source="assets/figure/final_image13.png" subtitle="" style="max-width: 900px;"></image-component> Sampling Rate: up to 90Hz Accuracy: 1.5° Weight: 566g Data Collected: Gaze</td>
+    <td>Tobii Pro Spark [J6] <image-component tag="final-img-14" source="assets/figure/final_image14.png" subtitle="" style="max-width: 900px;"></image-component> Sampling Rate: 60Hz Accuracy: 0.45° Weight: 97g Data Collected: Gaze, fixation, Saccade, Blink</td>
+  </tr>
+  <tr>
+    <td><strong>Visual Display</strong></td>
+    <td>Retrofitted glasses with a transparent OLED screen [J7] <image-component tag="final-img-15" source="assets/figure/final_image15.png" subtitle="" style="max-width: 900px;"></image-component> Weight: 13g Power source: External power source Display: Transparent OLED</td>
+    <td>HoloLens 2 [J2] <image-component tag="final-img-16" source="assets/figure/final_image16.png" subtitle="" style="max-width: 900px;"></image-component> Weight: 566g Power source: In-built battery pack Display: See-through holographic lenses</td>
+    <td>Xreal Air 2 Ultra [J3] <image-component tag="final-img-17" source="assets/figure/final_image17.png" subtitle="" style="max-width: 900px;"></image-component> Weight: 83g Power source: Wired connection with the phone Display: Micro OLED panel with brightness up to 500 nits</td>
+  </tr>
+</table></div>
+
+<p><strong>Eye Tracker Module:</strong> The Pupil Labs Bare Metal was selected. It provides the necessary high sampling rate (200Hz vs. HoloLens 2's 90Hz and Tobii's 60Hz), superior accuracy (1.2° vs. 1.5° for HoloLens 2), and crucial full access to raw eye-tracking data, which is essential for integration with our AI coach. The Tobii Pro Spark was dismissed due to its requirement for off-head placement (45cm away), making it unsuitable for mobile, outdoor golf use.</p>
+
+<p><strong>Visual Display:</strong> The Xreal Air 2 Ultra was chosen. Key selection criteria included outdoor functionality, spatial mapping, AR capabilities, and comfort. The Xreal Air 2 Ultra features a built-in screen, electrochromic lenses for direct sunlight visibility, and a lightweight design (83g vs. HoloLens 2's 566g). This lightweight form factor is critical for comfort over extended periods, as stated in PR7. The HoloLens 2 and transparent OLED options were rejected due to brightness issues in direct sunlight, the difficulty of integrating the Pupil Labs Bare Metal with the HoloLens 2's shape, and the HoloLens 2's weight.</p>
+
+<div id="2.3.-interfacing-the-xreal-glasses-with-bare-metal">
+  <h3>2.3. Interfacing the Xreal Glasses with Bare Metal</h3>
+</div>
+
+<image-component tag="final-img-18" source="assets/figure/final_image18.png" subtitle="" style="max-width: 900px;"></image-component> <image-component tag="final-img-19" source="assets/figure/final_image19.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p>Image : Pupil Labs’s Bare Metal, Xreal Air 2 Ultra</p>
+
+<p>Integrating the Pupil Labs Bare Metal eye-tracking module with the Xreal Air 2 Ultra display was a core engineering challenge necessary to create a cohesive prototype for real-time gaze tracking and HUD. This required overcoming several physical and optical constraints to ensure the system remained functional and comfortable. The integration effort focused on solving three key challenges:</p>
+
+<ol>
+  <li><strong>Accurate Positioning</strong>: Ensuring the Bare Metal was positioned at the correct eye level and angle to capture precise eye movement.</li>
+  <li><strong>Secure Attachment</strong>: Developing a snug attachment mechanism to prevent movement and sustain fast head movements during a golf swing.</li>
+  <li><strong>Display Visibility</strong>: Maintaining the user’s clear view of the Xreal glasses’ augmented reality display.</li>
+</ol>
+
+<p>The iterative design process is presented in section .</p>
+
+<div id="2.4.-logical-architecture">
+  <h3>2.4. Logical Architecture</h3>
+</div>
+
+<p>A high-level architecture diagram of our system is as shown. We were required to do hardware and software integrations to achieve the operational and performance requirements as set out by our design specifications.</p>
+
+<image-component tag="final-img-20" source="assets/figure/final_image20.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure</em></p>
+
+<div id="3.-prototyping">
+  <h2>3. Prototyping</h2>
+</div>
+
+<p>Drawing from the design specifications and conceptual frameworks established in Section 2, the project proceeded to the development of a functional prototype. This phase was characterized by an iterative design approach across the hardware, application, and backend software layers to ensure system integration and performance.</p>
+
+<div id="3.1.-iterative-design-of-hardware-layer">
+  <h3>3.1. Iterative Design of Hardware Layer</h3>
+</div>
+
+<p>The hardware integration phase focused on securing the Pupil Labs sensor to the Xreal glasses while maintaining precise optical alignment and user comfort. Through five distinct design iterations, the mounting mechanism was refined to achieve high-accuracy gaze tracking (PR3) and an ergonomic, lightweight form factor (OR5, PR7) suitable for active on-course play.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Proof of Concept</th>
+    <th>Iteration 2: Rigid Integration</th>
+    <th>Iteration 3: Front-Mounted Stability</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-21" source="assets/figure/final_image21.png" subtitle="" style="max-width: 900px;"></image-component> The attachment arms secured the Bare Metal sensor by hooking around the sides of the glasses and provided necessary structural support, as the glasses' nose bridge had to be removed for mounting.</td>
+    <td><image-component tag="final-img-22" source="assets/figure/final_image22.png" subtitle="" style="max-width: 900px;"></image-component><image-component tag="final-img-23" source="assets/figure/final_image23.png" subtitle="" style="max-width: 900px;"></image-component> In the second iteration, we implemented a slide-in mechanism designed to provide a more secure, rigid fit of the mounting arms to the sides of the glasses, effectively eliminating structural flexing. Additionally, the vertical positioning of the Bare Metal sensor was lowered to minimize visual occlusion of the camera module and improve the field of view.</td>
+    <td><image-component tag="final-img-24" source="assets/figure/final_image24.png" subtitle="" style="max-width: 900px;"></image-component> <image-component tag="final-img-25" source="assets/figure/final_image25.png" subtitle="" style="max-width: 900px;"></image-component> In the third iteration, we pivoted to a front-mounted attachment for the Bare Metal sensor. This structural shift eliminated the flexibility issues associated with the glasses' side arms in previous designs. By securing the eye-tracking module directly to the frontal frame, the prototype achieved superior stability and alignment, providing a more consistent and reliable gaze-tracking environment for the user.</td>
+  </tr>
+  <tr>
+    <td><strong>Problems faced</strong></td>
+    <td>In the initial iteration, the mounting arm required additional length to wrap around the side of the Xreal glasses. However, this extra length introduced structural flexibility, causing the bracket to flex upwards. This displacement shifted the Bare Metal sensor above its intended height, resulting in the glasses' frame obstructing the eye-tracking camera's field of view.</td>
+    <td><image-component tag="final-img-26" source="assets/figure/final_image26.png" subtitle="" style="max-width: 900px;"></image-component> The design restricted the side arms from flexing beyond a certain angle, which significantly reduced the wearability and comfort for users with different head shapes.</td>
+    <td><image-component tag="final-img-27" source="assets/figure/final_image27.png" subtitle="" style="max-width: 900px;"></image-component> Two primary concerns persisted: minor visual interference from the front-mounted hardware and the exposure of sensitive electronics to environmental elements.</td>
+  </tr>
+</table></div>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 4: Environmental Housing</th>
+    <th>Iteration 5: Modular Locking System</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-28" source="assets/figure/final_image28.png" subtitle="" style="max-width: 900px;"></image-component><image-component tag="final-img-29" source="assets/figure/final_image29.png" subtitle="" style="max-width: 900px;"></image-component> The fourth iteration focused on protecting the critical electronic circuitry from rain and airborne debris common during on-course gameplay. We developed a custom, wing-like housing that follows the contour of the Xreal frame, providing a protective shell.</td>
+    <td><image-component tag="final-img-30" source="assets/figure/final_image30.png" subtitle="" style="max-width: 900px;"></image-component><image-component tag="final-img-31" source="assets/figure/final_image31.png" subtitle="" style="max-width: 900px;"></image-component> For the final iteration, a two-part modular attachment was engineered. This design allows the protective housing to be securely snapped over the Xreal frame, while a separate, slide-in nose bridge component locks the entire assembly into place. This improved both structural rigidity and the ease of mounting the sensors for different users.</td>
+  </tr>
+  <tr>
+    <td><strong>Problems faced</strong></td>
+    <td>The wing-shaped design, while aesthetically integrated, created significant friction during the assembly process. Physical interference between the custom housing and the Xreal frame required excessive force to latch the components together, posing a risk of structural damage.</td>
+    <td>While the sliding mechanism can occasionally allow the nose bridge to detach at specific angles, this remains a marginal issue in practice. The natural mechanics of donning and removing the glasses consistently force the bridge toward the frame, effectively locking it in place and preventing accidental detachment during use.</td>
+  </tr>
+</table></div>
+
+<div id="3.2.-iterative-design-of-application-layer">
+  <h3>3.2. Iterative Design of Application Layer</h3>
+</div>
+
+<p>The application layer serves as the critical interface between hardware telemetry and user visualization. Developed using Unity, this layer enables the rendering of AR features and real-time data overlays.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Backend Integration</th>
+    <th>Iteration 2: HUD Visualization</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><strong><image-component tag="final-img-32" source="assets/figure/final_image32.png" subtitle="" style="max-width: 900px;"></image-component> Figure: Dashboard</strong>  Initial development established a reliable communication link between the Unity environment and backend servers, enabling the transmission and rendering of raw eye-tracking data.</td>
+    <td><image-component tag="final-img-33" source="assets/figure/final_image33.png" subtitle="" style="max-width: 900px;"></image-component> Figure Hardware telemetry was successfully bridged to the AR environment, allowing for the first implementation of a floating Heads-Up Display (HUD) within the user's field of view.</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td>The application was limited to PC execution, preventing true mobile AR deployment on Android-based hardware required for on-course testing.</td>
+    <td>The interface suffered from information overload. A lack of visual hierarchy and signifiers made it difficult for users to quickly process key data points.</td>
+  </tr>
+</table></div>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 3: Modular Information Hierarchy</th>
+    <th>Iteration 4: Context-Aware HUD Gating</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-34" source="assets/figure/final_image34.png" subtitle="" style="max-width: 900px;"></image-component> Figure Visual segmentation was introduced to organize data modules. By adding clear boundaries, golfers could more effectively distinguish between weather, yardage, and gaze metrics.</td>
+    <td>To prevent distraction during execution, the HUD was locked above the primary eye level. The display is gated by head tilt, disappearing when the user looks down to address the ball.</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td>Persistent AR overlays were found to obstruct the golfer's view of the ball during the address and swing phases, negatively impacting focus.</td>
+    <td></td>
+  </tr>
+</table></div>
+
+<div id="3.3.-iterative-design-of-backend-software-layer">
+  <h3>3.3. Iterative Design of Backend Software Layer</h3>
+</div>
+
+<p>The backend software architecture provides the computational logic required to fulfill operational requirements, divided into five specialized modules.</p>
+
+<p>The backend software layer can be split into 5 main modules.</p>
+
+<ol>
+  <li>Remote control module</li>
+  <li>Eye tracking module</li>
+  <li>AI caddie module</li>
+  <li>Weather data module</li>
+  <li>Yardage calculation module</li>
+</ol>
+
+<div id="3.3.1.-remote-control-module">
+  <h4>3.3.1. Remote Control Module</h4>
+</div>
+
+<p>This module facilitated manual data override for testing. Using a "Wizard of Oz" methodology, the team could simulate automated responses to validate the user experience prior to full algorithm automation.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Manual Control Interface</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-35" source="assets/figure/final_image35.png" subtitle="" style="max-width: 900px;"></image-component> Figure The control interface included the following diagnostic capabilities: Active player button to load player data based on which player is wearing the glasses. Distance input field and send to phone button for us to manually input the actual distance between the golfer and their target, and display it on the Xreal glasses connected to the phone.  Trigger glasses recording button which allowed users to communicate with our AI module via speech. Trigger computer vision (QE) button which allowed us to extract the golfer fixation duration on ball at the time of shot.</td>
+  </tr>
+  <tr>
+    <td><strong>Problems faced</strong></td>
+    <td>High operational overhead; the system required a dedicated human operator to manually trigger data updates and capture events, which is not scalable for independent use.</td>
+  </tr>
+</table></div>
+
+<div id="3.3.2-eye-tracking-module">
+  <h4>3.3.2 Eye Tracking Module</h4>
+</div>
+
+<p>The Eye Tracking Module processes high-frequency gaze data to provide actionable feedback on attentional stability, specifically targeting the Quiet Eye (QE) duration.</p>
+
+<p>The following iterations fulfilled OR2, OR3, PR3, PR4 and PR5 of our requirements.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Real-Time Gaze Streaming</th>
+    <th>Iteration 2: Automated Analytics Pipeline</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-36" source="assets/figure/final_image36.png" subtitle="" style="max-width: 900px;"></image-component>Figure  Wizard of oz using pupil labs software.  The initial proof of concept utilized Pupil Labs' native streaming to allow a third party to monitor gaze patterns and provide verbal coaching based on visual feedback. This iteration only allowed third parties to monitor the user’s real time gaze through a red circle which traced their gaze. <image-component tag="final-img-37" source="assets/figure/final_image37.png" subtitle="" style="max-width: 900px;"></image-component> We used the pupil lab’s remote streaming capabilities to capture performance manually, and advised golfers on the spot to improve their gaze patterns and fixations [T4].</td>
+    <td><image-component tag="final-img-38" source="assets/figure/final_image38.png" subtitle="" style="max-width: 900px;"></image-component> This iteration improved on the previous iteration by empowering golfers with access to more eye data metrics - pupil diameter, eye focus duration etc. A custom data pipeline was developed to automate the extraction of raw gaze metrics. This transition empowered the system to independently calculate QE duration and fixation patterns without manual interpretation.</td>
+  </tr>
+  <tr>
+    <td><strong>Problems faced</strong></td>
+    <td>Heavy reliance on external observers to translate raw visual gaze markers into coaching advice for the golfer. The module lacked other eye data metrics such as eye focus duration on the ball which is crucial.</td>
+    <td>While data was captured automatically, the relay of these insights to the golfer's HUD remained a manual bottleneck.</td>
+  </tr>
+</table></div>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 3: Integrated Feedback Loop</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-39" source="assets/figure/final_image39.png" subtitle="" style="max-width: 900px;"></image-component> The final iteration closed the feedback loop by delivering QE duration metrics directly to the HUD immediately following a shot, providing the golfer with instant objective focus data. This was done by showing users their fixation duration right after the shot. Not only that, the shot number and fixation duration would be sent to the AI module, where actionable insights on how to improve user fixation would be provided back to the user.</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td></td>
+  </tr>
+</table></div>
+
+<div id="3.3.3.-ai-caddie-module">
+  <h4>3.3.3. AI Caddie Module</h4>
+</div>
+
+<p>The AI Caddie Module utilizes Large Language Models (LLMs) to provide contextualized recommendations and coaching based on environmental data and historical player performance.</p>
+
+<p>The AI caddie module fulfilled OR7 and PR10 as part of our design specifications.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: General LLM Interaction</th>
+    <th>Iteration 2: Context-Aware Personalization</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td><image-component tag="final-img-40" source="assets/figure/final_image40.png" subtitle="" style="max-width: 900px;"></image-component> Figure: Unity app working on the Windows interface  <image-component tag="final-img-41" source="assets/figure/final_image41.png" subtitle="" style="max-width: 900px;"></image-component> Figure : Unity app working on the Xreal glasses The first implementation established basic communication between the HUD and the AI server, allowing the user to query a general golf knowledge base via text/voice.</td>
+    <td><image-component tag="final-img-42" source="assets/figure/final_image42.png" subtitle="" style="max-width: 900px;"></image-component> Figure: Data collection from Foresight Indoor golfing  <image-component tag="final-img-43" source="assets/figure/final_image43.png" subtitle="" style="max-width: 900px;"></image-component> Figure: Data from Foresight indoor golfing The module was upgraded to ingest player-specific club yardage reports. This allowed the AI to provide personalized club recommendations based on the user's actual hitting profile. Besides club selection, they were also given actionable insights based on golf course conditions as well as their eye focus duration. For testing purposes, we even added multiple profiles with different clubs that they own and the average distances.</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td>General responses provided limited tactical value as they did not account for the specific golfer's skill level or equipment. The AI did not factor in the unique context or statistical baselines of the individual golfers, overlooking crucial variables such as the fact that club yardages for a 9 iron versus a 6 iron vary drastically from player to player.</td>
+    <td>The UI/UX was a problem as it was too cluttered with information which was addressed with the other features on the later part.</td>
+  </tr>
+</table></div>
+
+<div id="3.3.4.-weather-data-module">
+  <h4>3.3.4. Weather Data Module</h4>
+</div>
+
+<p>The Weather Data Module automates the retrieval of environmental variables, fulfilling OR1 and PR1 to inform tactical decision-making.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Bridging the weather API to the xreal glasses</th>
+    <th>Iteration 2: Displaying golf-specific weather data</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td>Include image We first focused on ensuring that the Xreal glasses could pull data from API and display crucial metrics such as temperature, wind, humidity etc.</td>
+    <td>Include image Based on our interviews we found that the top 3 concerns are wind speed, temperature and humidity. Hence we reduced the number of weather data shown to these 3. Wind speed with respect to where user is facing Temperature data Humidity data</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td>Early versions displayed excessive meteorological data, overwhelming the user and making it difficult to find actionable information quickly.</td>
+    <td></td>
+  </tr>
+</table></div>
+
+<div id="3.3.5-yardage-calculator-module">
+  <h4>3.3.5 Yardage Calculator Module</h4>
+</div>
+
+<p>This module calculates "Playing Yardage" by applying ball-flight physics to raw distance, factoring in wind, temperature, humidity, and altitude to eliminate mental estimation errors (OR1, PR2).</p>
+
+<p>The following interactions fulfilled OR1 and PR2 of our design specifications.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th></th>
+    <th>Iteration 1: Displaying calculated playing yardage</th>
+  </tr>
+  <tr>
+    <td><strong>Design</strong></td>
+    <td>Include image Calculated playing yardage was displayed directly on the HUD. Verification was performed by manually inputting rangefinder values to ensure algorithmic accuracy against professional estimates.</td>
+  </tr>
+  <tr>
+    <td><strong>Problem faced</strong></td>
+    <td>Distance input was not yet autonomous; a technician was required to provide raw yardage values to the system for the calculation to trigger.</td>
+  </tr>
+</table></div>
+
+<image-component tag="final-img-44" source="assets/figure/final_image44.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<div id="4.-testing-&-validation">
+  <h2>4. Testing & Validation</h2>
+</div>
+
+<p>4.1 Test Objectives & Scope</p>
+
+<p>We verified our prototype by mapping it to the list of operational requirements and performance requirements in our design specifications, in line with the verification and validation framework. [R1]</p>
+
+<p>A checklist of operational requirements and performance requirements was used to verify if the system built met the requirements that were set out.</p>
+
+<p>4.2 Test Protocols</p>
+
+<image-component tag="final-img-45" source="assets/figure/final_image45.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure : Mandai map</em></p>
+
+<p>Two golfers participated in the on-course evaluation: a sponsored professional athlete with an official handicap of (-2) and an amateur-level player with an approximate handicap of 20. This pairing was intentional, as it allowed the prototype to be assessed across distinctly different player profiles and skill levels.</p>
+
+<image-component tag="final-img-46" source="assets/figure/final_image46.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure : AR glasses set up</em></p>
+
+<image-component tag="final-img-47" source="assets/figure/final_image47.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure: Wizard of OZ for voice actuated features</em></p>
+
+<p>To simulate a seamless, hands-free user experience, a pouch was used to store the phones on the golfers' persons, keeping the hardware out of sight during play. Additionally, the AI interaction was Wizard-of-Oz's - the golfer triggered the system by saying "Hey Meta," replicating the voice-activation flow of the Meta Ray-Ban glasses to ensure the testing experience closely mirrored the intended final product interaction.</p>
+
+<p>Testing was conducted on Holes 3, 6, and 8 of the Mandai Executive Golf Course. These holes were specifically selected because they are all Par 3 holes, meaning the golfer's objective on each tee shot is to reach the green directly. This eliminates the variable of course management strategy. There is no need for the golfer to decide between laying up, shaping a shot around a dogleg, or targeting an intermediate position. Instead, the target is fixed (the pin), and the distance from white tee to green is known. This made Par 3 holes ideal for evaluating the system's core functionality since all key variables such as distance, target, and shot intent are clearly defined from the outset.</p>
+
+<image-component tag="final-img-48" source="assets/figure/final_image48.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p>4.3 Data Collection & Observations</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Requirement</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Evidence/ Remarks</th>
+  </tr>
+  <tr>
+    <td>PR1</td>
+    <td>The system shall provide localised environmental data with a minimum sampling frequency of one every 1 minute.</td>
+    <td>Met</td>
+    <td>The API provided updated localised weather data well within the 1 minute threshold.</td>
+  </tr>
+  <tr>
+    <td>PR2</td>
+    <td>The system shall provide an accurate yardage calculation within 5 metres.</td>
+    <td>Met</td>
+    <td>Verified by the professional golfer's independent cross-check during on-course play. His mental calculation, informed by years of competitive experience, aligned within 5 metres of the system's computed playing yardage.  While this represents a single-user validation rather than a controlled measurement, it provides strong preliminary evidence given the golfer's expertise.</td>
+  </tr>
+  <tr>
+    <td>PR3</td>
+    <td>The system must support accurate gaze tracking with an accuracy of up to 2°.</td>
+    <td>Met</td>
+    <td>The Pupil Labs Bare Metal has a manufacturer-specified accuracy of 1.2°, which exceeds the 2° requirement.  Standard calibration according to pupil labs guidelines was performed before each session.</td>
+  </tr>
+  <tr>
+    <td>PR4</td>
+    <td>The sensor must provide access to raw eye-tracking data for AI integration.</td>
+    <td>Met</td>
+    <td>The Pupil Labs Bare Metal provides full access to raw gaze data via its API, including gaze point, fixation events, pupil diameter, blink data, and head pose. This data was successfully extracted and piped into the AI coaching pipeline during the on-course evaluation.</td>
+  </tr>
+  <tr>
+    <td>PR5</td>
+    <td>The system shall provide feedback on the golfer's focus within 5 seconds of taking a shot.</td>
+    <td>Met</td>
+    <td>From QE data capture, to processing, to GPT-4 inference with feedback within 5 seconds during the Mandai evaluation.</td>
+  </tr>
+  <tr>
+    <td>PR6</td>
+    <td>The system shall remove all information within 1 second of detecting the golfer ready to take a shot.</td>
+    <td>Not Met</td>
+    <td>Gaze-triggered HUD removal was not implemented in the current prototype. This is identified as a key area for future development; implementation could leverage the existing Pupil Labs fixation data to detect the onset of the pre-shot routine and trigger HUD dismissal.</td>
+  </tr>
+  <tr>
+    <td>PR7</td>
+    <td>The weight of the system shall be less than 200g</td>
+    <td>Met</td>
+    <td>The overall device weighs less than 200g.</td>
+  </tr>
+  <tr>
+    <td>PR8</td>
+    <td>The system shall be IP67 rated.</td>
+    <td>Not met</td>
+    <td>Waterproofing and dust ingress protection were not addressed in the current prototype</td>
+  </tr>
+  <tr>
+    <td>PR9</td>
+    <td>The system shall operate continuously for a minimum of 3 hours without charging.</td>
+    <td>Met</td>
+    <td>The system operated for the full duration of the on-course evaluation of 3 hours without requiring a recharge, meeting the minimum operational endurance requirement.</td>
+  </tr>
+  <tr>
+    <td>PR10</td>
+    <td>The system shall provide recommended club selection and execution within 5 seconds of inquiry by the golfer.</td>
+    <td>Met</td>
+    <td>AI response latency was consistently under 5 seconds during the Mandai evaluation. Both testers noted that the response speed was practical for on-course use without disrupting their routine.</td>
+  </tr>
+  <tr>
+    <td>OR1</td>
+    <td>The system shall automatically integrate environmental data (wind, elevation, temperature, humidity) to calculate an adjusted "Playing Yardage."</td>
+    <td>Met</td>
+    <td>The system retrieved real-time weather data via the Openmeteo api and computed an adjusted playing yardage, factoring in wind speed, wind direction, temperature, and humidity.  Wind-adjusted club recommendations directly influenced his club selection on at least one hole.</td>
+  </tr>
+  <tr>
+    <td>OR2</td>
+    <td>The system shall capture and process key gaze metrics, including Quiet Eye duration and fixation patterns.</td>
+    <td>Met</td>
+    <td>The Pupil Labs Bare Metal eye tracker successfully captured raw gaze data during the Mandai evaluation.  The data pipeline processed this to extract Quiet Eye duration, which was then fed into the GPT-4o coaching model as contextual input for personalised feedback.</td>
+  </tr>
+  <tr>
+    <td>OR3</td>
+    <td>The system shall provide feedback based on the golfer's gaze metrics of focus and readiness before a shot.</td>
+    <td>Met</td>
+    <td>Quiet Eye duration was measured per shot and injected into the GPT-4o prompt context.  The AI coach provided personalised feedback referencing the golfer's gaze behaviour, including whether their QE duration was within the optimal range established in the literature (2–3.5 seconds).</td>
+  </tr>
+  <tr>
+    <td>OR4</td>
+    <td>The system shall automatically remove information when the golfer gets ready to take a shot.</td>
+    <td>Partially Met</td>
+    <td>Auto-removal of the HUD was not implemented. However, the AR overlay was positioned in the upper field of view and did not track the golfer's downward gaze when addressing the ball.  Both testers confirmed the overlay did not obstruct their view during setup and execution, achieving the intent of the requirement through spatial placement rather than automatic toggling.</td>
+  </tr>
+  <tr>
+    <td>OR5</td>
+    <td>The system must be lightweight and comfortable for use over an extended period.</td>
+    <td>Partially met</td>
+    <td>Testers preferred a wireless design.  Testers reported the combined assembly felt front-heavy due to the forward-mounted sensor and 3D-printed bracket, and the tethered cable setup added bulk.</td>
+  </tr>
+  <tr>
+    <td>OR6</td>
+    <td>The hardware must be compatible with standard golf attire and designed for on-course use.</td>
+    <td>Partially Met</td>
+    <td>The glasses' form factor was compatible with standard golf caps — testers were able to hook the glasses onto the cap brim as they would with regular sunglasses.  Depth perception was an issue for golfers when they took putts due to the nature of the HUD.</td>
+  </tr>
+  <tr>
+    <td>OR7</td>
+    <td>The system shall provide autonomous, real-time club selection and execution recommendations based on fused Quiet Eye and Course data.</td>
+    <td>Met</td>
+    <td>The AI coaching module combined environmental data (wind-adjusted playing yardage) with player-specific club distance profiles (loaded from historical Foresight launch monitor data) and Quiet Eye metrics to generate personalized club recommendations and execution tips.</td>
+  </tr>
+</table></div>
+
+<p>Out of 17 requirements, 12 were fully met, 3 were partially met, and 2 were not met. The two unmet requirements, PR6 (auto-HUD removal) and PR8 (IP67 rating), were bound by time and hardware constraints rather than fundamental technical limitations. Importantly, every requirement tied to our primary value proposition of real-time Quiet Eye feedback and AI-powered coaching was fully met during the on-course evaluation.</p>
+
+<div id="5.-results-&-discussion">
+  <h2>5. Results & Discussion</h2>
+</div>
+
+<div id="5.1-analysis-of-results">
+  <h3>5.1 Analysis of Results</h3>
+</div>
+
+<div id="5.1.1-validation-of-quiet-eye-feedback-against-literature">
+  <h4>5.1.1 Validation of Quiet Eye Feedback Against Literature</h4>
+</div>
+
+<p>To validate the QET component of GolfVision, testing was conducted across two phases: a controlled putting experiment (Phase 1\) and an on-course system evaluation at Mandai Executive Golf Course (Phase 2).</p>
+
+<image-component tag="final-img-49" source="assets/figure/final_image49.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure: Putting Quiet eye experiments</em></p>
+
+<p>Phase 1: Controlled Experimental Validation</p>
+
+<p>Controlled 8ft putting trials established that QET intervention produced statistically meaningful improvements in proximal performance metrics. Precision and distance control improved by 10-15cm. This divergence validated the necessity of GolfVision as a continuous, on-course feedback architecture rather than a discrete coaching intervention, directly addressing the requirement for real-time gaze-action coupling stabilization.</p>
+
+<p>As seen in the figure below the introduction of QET helped the golfer to putt nearer to the hole, which is optimal as golfers usually aim to get the ball as close to the hole as possible in order to finish it off on the second putt.</p>
+
+<image-component tag="final-img-50" source="assets/figure/final_image50.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure: Data extracted from phase 1 testing of Quiet eye training</em></p>
+
+<p>Phase 2: On-Course System Integration (Mandai)</p>
+
+<p>On-course deployment confirmed the system's ability to extract and process high-frequency QE data via the Pupil Labs module within the required 5-second latency threshold (PR5). Gaze patterns aligned with skill-differentiated benchmarks (2.0-–3.5s for the professional; \~1.5s for the amateur), with the amateur exhibiting an adaptive upward trend in fixation duration following real-time feedback. This serves as a functional proof-of-concept for the primary value proposition: transforming an internal cognitive state into a quantifiable, actionable HUD metric to improve execution consistency during live play.</p>
+
+<div id="5.1.2-playing-yardage-calculator-—-accuracy-and-decision-impact">
+  <h4>5.1.2 Playing Yardage Calculator — Accuracy and Decision Impact</h4>
+</div>
+
+<p>During the on-course evaluation across the three selected Par 3 holes, the system dynamically sourced localized environmental parameters via the OpenMeteo API to compute an adjusted "Playing Yardage," factoring in wind velocity, direction relative to the golfer, temperature, and humidity. Baseline raw distances were obtained using the hardcoded values of the holes from the mandai golf data sheet. Crucially, the final computed Adjusted Playing Yardage values across all three holes closely approximated the professional golfer's experienced mental assessment, providing strong initial validation for the algorithm’s real-world accuracy.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Hole</th>
+    <th>Raw Yardage</th>
+    <th>Wind wrt to the player</th>
+    <th>Temp</th>
+    <th>Humidity</th>
+    <th>Adjusted Playing Yardage(UNITY APP)</th>
+    <th>Pro's Mental Estimate</th>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>110</td>
+    <td>5  Mph (NE)</td>
+    <td>30</td>
+    <td>84%</td>
+    <td>112</td>
+    <td>115</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>83</td>
+    <td>5  Mph (SE)</td>
+    <td>30</td>
+    <td>84%</td>
+    <td>80</td>
+    <td>75</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>90</td>
+    <td>5  Mph (NE)</td>
+    <td>30</td>
+    <td>84%</td>
+    <td>94</td>
+    <td>100</td>
+  </tr>
+</table></div>
+
+<div id="5.1.3-hardware-ergonomics-—-human-factors-analysis">
+  <h4>5.1.3 Hardware Ergonomics — Human Factors Analysis</h4>
+</div>
+
+<p>While the system weight met the 200g target (PR7), testers reported the assembly felt front-heavy due to the forward-mounted sensor and 3D-printed bracket. This created pressure points and fatigue over time. Future designs should redistribute mass, potentially by moving companion electronics to the rear of the head strap.</p>
+
+<p>Testers noted depth perception issues during putting, where objects appeared closer than their actual distance. This results from the Xreal display's fixed focal plane conflicting with the 1–2 meter convergence required for putting—a conflict less noticeable at longer distances. Future designs must mitigate this optical constraint by dynamically adjusting the virtual image plane or disabling the HUD during the putting routine.</p>
+
+<p>Both testers preferred a wireless system, as the current tethered setup felt bulky and restricted movement (OR5 partially met). While the USB-C connection was necessary for high-bandwidth raw data streaming from the Pupil Labs sensor, moving to a wireless solution introduces challenges in balancing power consumption with the low latency required for real-time feedback (PR5). Future development will focus on integrated, power-efficient wireless modules.</p>
+
+<div id="5-1-4-ai-caddie-module-recommendation-quality-and-decision-impact">
+  <h4>5.1.4 AI Caddie Module — Recommendation Quality and Decision Impact</h4>
+</div>
+
+<p>During the Mandai evaluation, the AI Caddie's wind-adjusted club recommendation directly caused the professional golfer to change his club selection on at least one hole — a moment captured on video. This demonstrates that the system's output was actionable: an experienced professional trusted the AI's recommendation over his initial instinct, indicating that the fused data (wind, playing yardage, and personal club profiles) provided value beyond what even a trained golfer could mentally compute.</p>
+
+<p>A limitation was observed in context sensitivity. The professional golfer expressed interest in receiving Quiet Eye feedback specifically for putting, but considered it less relevant for full shots. The current system does not distinguish between shot types when delivering gaze-based coaching — it provides the same feedback for putts, approach shots, and tee shots. This lack of shot-context awareness reduces personalisation and represents a gap relative to the nuanced, situation-dependent advice a human caddie would provide.</p>
+
+<div id="5-1-5-weather-data-module-and-hud-user-experience">
+  <h4>5.1.5 Weather Data Module and HUD User Experience</h4>
+</div>
+
+<p>The professional golfer confirmed that all three displayed weather variables — temperature, humidity, and wind speed — were relevant to his decision-making, validating the design decision in Section 3.3.4 to limit the weather display to these three metrics.</p>
+
+<p>The pro golfer noted that having real time wind data with respect to his gaze direction was very helpful in helping him decide how to take his shot.</p>
+
+<p>A practical usability finding emerged regarding units of measurement. The professional expressed a preference for mixed units depending on context: wind speed in miles per hour, distance in metres for approach shots, but feet for close-range putting (e.g., "a 10-foot putt" versus "a 20-metre approach"). The current system uses fixed units, requiring the golfer to mentally convert — a minor but unnecessary cognitive overhead that works against the intent of UR3.</p>
+
+<p>Testers also noted that while they appreciated the current display layout and information hierarchy, the overall UI required further visual refinement before it would be suitable for a broader user cohort.</p>
+
+<div id="5-1-6-spatial-mapping-and-feature-requests">
+  <h4>5.1.6 Spatial Mapping and Feature Requests</h4>
+</div>
+
+<p>Both testers provided unsolicited feedback on features beyond the current prototype scope. The most requested feature was a minimap-style hazard overlay — described by the testers as a "video game-like map" - displaying straight-line distances to bunker edges (front and back) and green boundaries. Testers emphasised that understanding the size of their landing zone relative to surrounding hazards was critical to course management, and that an in-HUD overlay would eliminate the need for separate course maps.</p>
+
+<p>Additional requests included green scanning to overlay the intended shot line and ball tracking post-impact. While outside the current project scope, this feedback validates the broader market demand identified in Section 1.1.2 and informs the Stanford development roadmap (Section 6.2).</p>
+
+<div id="5-2-system-level-validation-against-user-requirements">
+  <h3>5.2 System-Level Validation Against User Requirements</h3>
+</div>
+
+<p>Sections 4.3 and 5.1 verified that individual components met their specifications and analysed their on-course performance. This section maps those findings back to the four User Requirements (UR1–UR4) from Section 1.9, assessing whether the integrated system addresses the golfer's actual needs as identified through the JTBD framework.</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>User Need</th>
+    <th>Linked Reqs</th>
+    <th>Key Evidence</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td><strong>UR1</strong>. Consolidated, real-time course intelligence within the golfer's line of sight</td>
+    <td>OR1, PR1, PR2</td>
+    <td>Adjusted yardage within 2–10 yards of pro's estimate across 3 holes (Section 5.1.2)  Pro confirmed wind, temperature, humidity were all decision-relevant  All data consolidated on HUD - no secondary device needed Addresses Think Branch root cause (Section 1.4.1)</td>
+    <td>Validated</td>
+  </tr>
+  <tr>
+    <td><strong>UR2</strong>. Real-time gaze-based focus feedback to confirm mental readiness</td>
+    <td>OR2, OR3, PR3, PR4, PR5</td>
+    <td>Phase 1: putting precision improved 10-15 cm with QE intervention  Phase 2: amateur QE duration trended upward after real-time feedback  Gaze data captured at 1.2° accuracy; feedback within 5s threshold  Addresses Feel Branch root cause (Section 1.4.1)</td>
+    <td>Validated</td>
+  </tr>
+  <tr>
+    <td><strong>UR3</strong>. Minimise cognitive load and distraction during pre-shot routine</td>
+    <td>OR4, OR5, OR6, PR6, PR7, PR8, PR9</td>
+    <td>HUD spatial anchoring avoided gaze obstruction during shot execution  Weight under 200g; 3-hour battery life; golf cap compatible  <strong>Gaps:</strong> Auto-HUD removal not implemented (PR6); front-heavy discomfort (OR5); depth perception error during putting (OR6); IP67 not addressed (PR8); fixed units add cognitive overhead</td>
+    <td>Partially Validated</td>
+  </tr>
+  <tr>
+    <td><strong>UR4</strong>. Accessible, integrated assistant combining gaze training and course intelligence</td>
+    <td>OR7, PR10</td>
+    <td>AI Caddie fused wind, club profiles, and QE metrics into recommendations  Pro changed club selection based on AI advice (video evidence)  Response latency consistently under 5s  <strong>Gap:</strong> No shot-type distinction in QE feedback delivery</td>
+    <td>Validated</td>
+  </tr>
+</table></div>
+
+<p>Three of four user requirements (UR1, UR2, UR4) were validated. UR3 was partially validated - notably, both fully unmet performance requirements (PR6, PR8) fall under this user need, confirming that minimising cognitive load remains the primary development gap. The validated requirements correspond to the system's core value proposition (course intelligence and gaze coaching), while UR3 relates to ergonomic and interaction design - suggesting the concept is sound but the form factor needs further iteration.</p>
+
+<image-component tag="final-img-51" source="assets/figure/final_image51.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<div id="6.-recommendations-&-reflection">
+  <h2>6. Recommendations & Reflection</h2>
+</div>
+
+<p>The development of GolfVision posed significant engineering challenges, requiring the seamless integration of high-frequency eye-tracking hardware with real-time AR visualization and AI-driven analytics. This project demonstrates a high-value application for smart glass technology, particularly as  Meta integrate eye-tracking sensors into future consumer hardware. By providing golfers with previously invisible environmental data and elite-level gaze training, GolfVision transforms a standard accessory into a powerful performance-enhancing tool.</p>
+
+<div id="6.1-identification-of-shortcomings">
+  <h3>6.1 Identification of Shortcomings</h3>
+</div>
+
+<p><strong>Software Compatibility and Stability:</strong> The most significant challenge encountered was the shifting software ecosystem for the Xreal Air 2 Ultra. During development, Xreal transitioned from the Nebula OS to AndroidXR, deprecating support for legacy Unity integrations. This transition required sourcing third-party middleware to run the custom Unity application, which introduced periodic system glitches and limited the ability to leverage native features like high-fidelity hand tracking, ultimately impacting the fluidity of the user interface.</p>
+
+<p><strong>Hardware Complexity and Portability:</strong> The current prototype requires a fragmented ecosystem of five distinct devices to function—including two smartphones, a laptop for backend processing, the eye-tracking module, and the AR glasses. This multi-device dependency creates significant friction for on-course play, increasing bulk and reducing the portability expected of a consumer-grade sports accessory. A streamlined, wireless architecture that integrates processing into a single companion device is necessary for market viability.</p>
+
+<p><strong>Optical Convergence and Depth Perception:</strong> Testing revealed a persistent depth perception error caused by the prism optics of the AR display. Golfers reported difficulty gauging the exact spatial relationship between the club head and the ball during the putting stroke, as the virtual overlay's fixed focal plane competed with the close-range physical target. This optical conflict necessitates frequent recalibration and suggests that the design of the AR glasses must maintain the natural visual focus of the golfer.</p>
+
+<div id="6.2-future-works-to-be-done-at-stanford">
+  <h3>6.2 Future works to be done at Stanford</h3>
+</div>
+
+<image-component tag="final-img-52" source="assets/figure/final_image52.png" subtitle="" style="max-width: 900px;"></image-component><image-component tag="final-img-53" source="assets/figure/final_image53.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure : Stanford Golf Course Testing</em></p>
+
+<p class="figure-caption"><em>Figure : Course management Strategies</em></p>
+
+<p>While the current prototype demonstrates core functionality, several advanced features remain for future development in collaboration with Stanford University. These include hazard detection, stress management, and course management strategy—capabilities intended to transition the system from Par 3 evaluation to comprehensive full-course decision support. This evolution aims to provide a robust digital alternative to traditional caddie services by addressing a broader spectrum of on-course challenges. Due to the limited duration of initial testing in Singapore, a subsequent phase of rigorous user validation is scheduled in the United States. This phase will involve a larger cohort of athletes to gather diverse technical feedback and refine the system for global market requirements.</p>
+
+<p>Based on hardware ergonomics feedback (Section 5.1.3), future work will also focus on redistributing the mass of the glasses to address the front-heavy feel. Additionally, we will explore ways to dynamically disable the lens or move the HUD out of the way to mitigate the optical convergence error observed during putting.</p>
+
+<image-component tag="final-img-54" source="assets/figure/final_image54.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<image-component tag="final-img-55" source="assets/figure/final_image55.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p>Other sports application</p>
+
+<div id="7.-impact-&-visibility-(a9)">
+  <h2>7. Impact & Visibility (A9)</h2>
+</div>
+
+<div id="7.1-cross-sport-applicability">
+  <h3>7.1 Cross-Sport Applicability</h3>
+</div>
+
+<p>GolfVision represents a pioneering application of real-time gaze-action coupling training in a mobile sporting environment. The underlying architecture—fusing high-frequency eye-tracking data with contextual environment analytics—possesses significant transferability to any target-oriented sport where attentional control is a primary performance determinant. In disciplines such as hockey, archery, and soccer, the system can provide coaches with a precise, objective quantification of an athlete’s visual search strategy and fixation stability. By identifying suboptimal gaze patterns during high-pressure execution, the platform enables targeted interventions to enhance team dynamics and individual precision.</p>
+
+<image-component tag="final-img-56" source="assets/figure/final_image56.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure : Testing of the Quiet Eye Training in a Hockey Session</em></p>
+
+<image-component tag="final-img-57" source="assets/figure/final_image57.png" subtitle="" style="max-width: 900px;"></image-component>
+
+<p class="figure-caption"><em>Figure : Testing of the Eye tracker with the Singapore National Hockey team</em></p>
+
+<div id="7.2-non-sport-training-and-education">
+  <h3>7.2 Non-Sport Training and Education</h3>
+</div>
+
+<p>Beyond the athletic arena, the technology’s capacity to track and guide visual focus offers transformative potential for high-stakes professional training. Empirical research has already demonstrated that Quiet Eye training significantly improves the performance of junior surgeons under pressure, particularly in precision tasks like surgical knot-tying. By adapting this system to educational contexts, we can accelerate the motor-skill acquisition phase for complex manual tasks, providing learners with real-time feedback on where and when to focus their visual attention to mirror expert-level performance.</p>
+
+<div id="7.3-market-potential-and-industrial-scale">
+  <h3>7.3 Market Potential and Industrial Scale</h3>
+</div>
+
+<p>The integration of advanced biometric tracking within a lightweight AR form factor positions GolfVision at the forefront of the global sports technology market, currently valued at approximately USD $93.81 billion [J8]. As hardware manufacturers like Meta continue to embed eye-tracking sensors into consumer-grade smart glasses, the modular software framework developed in this project can be scaled across various industrial sectors to enhance productivity, safety, and operational precision.</p>
+
+<div id="8.-references">
+  <h2>8. References</h2>
+</div>
+
+<p>[J1] ‘Fees’, Learngolfsingapore.com. [Online]. Available: https://learngolfsingapore.com/fees/. [Accessed: 10-Mar-2026].</p>
+
+<p>[J2] MSBryan, ‘HoloLens 2 hardware’, Microsoft.com. [Online]. Available: https://learn.microsoft.com/en-us/hololens/hololens2-hardware. [Accessed: 17-Mar-2026].</p>
+
+<p>[J3]	‘XREAL - Building Augmented Reality for Everyone’, XREAL Ltd. [Online]. Available: https://www.xreal.com/. [Accessed: 17-Mar-2026].</p>
+
+<p>[J4]	MSBryan, ‘Eye tracking overview - Mixed Reality’, Microsoft.com. [Online]. Available: https://learn.microsoft.com/en-us/windows/mixed-reality/design/eye-tracking. [Accessed: 17-Mar-2026].</p>
+
+<p>[J5]	‘Neon - Technical Specifications - Neon eye tracking module and frames’, Pupil-labs.com. [Online]. Available: https://pupil-labs.com/products/neon/specs. [Accessed: 17-Mar-2026].</p>
+
+<p>[J6]	Tobii.com. [Online]. Available: https://go.tobii.com/tobii-pro-spark-brochure. [Accessed: 01-Apr-2026].</p>
+
+<p>[J7] [1]	‘Blue 1.51" Transparent OLED Display 128x56 Controller SSD1309 SPI’, Buydisplay.com. [Online]. Available: https://www.buydisplay.com/blue-1-51-inch-transparent-oled-display-128x56-controller-ssd1309-spi. [Accessed: 02-Apr-2026].</p>
+
+<p>[J8]	‘Wearable Devices Technology in Sport Market - Companies & Trends’, Mordor Intelligence. [Online]. Available: https://www.mordorintelligence.com/industry-reports/wearable-devices-in-sports-market. [Accessed: 02-Apr-2026].</p>
+
+<p>[J9]	J. Causer, J. N. Vickers, R. Snelgrove, G. Arsenault, and A. Harvey, ‘Performing under pressure: quiet eye training improves surgical knot-tying performance’, Surgery, vol. 156, no. 5, pp. 1089–1096, 2014.</p>
+
+<p>Source: https://www.mordorintelligence.com/industry-reports/wearable-devices-in-sports-market</p>
+
+<p>[T1]A. W. Ulwick, <em>Jobs to be done : theory to practice</em>. Houston, Tx: Idea Bite Press, 2016. Available: https://jobs-to-be-done-book.com/thank-you/</p>
+
+<p>[T2] Rick Shiels Golf. “THE PERFECT GOLF PRE SHOT ROUTINE \= More Consistency.” <em>YouTube</em>, 22 Feb. 2021, www.youtube.com/watch?v=kdR6aF2CxtQ. Accessed 20 Mar. 2026.</p>
+
+<p>[T3] The Scoring Method. “Proven Pre-Shot Routine to BREAK 80\!” <em>YouTube</em>, 4 Apr. 2024, www.youtube.com/watch?v=aNQBTKTZMes. Accessed 20 Mar. 2026.</p>
+
+<p>[T4] Dalton, Kristine. “The Vision Strategy of Golf Putting.” <em>Aston Publications Explorer (Aston University)</em>, 1 Jan. 2013, https://doi.org/10.48780/publications.aston.ac.uk.00019543. Accessed 10 Jan. 2026.</p>
+
+<p>[T5] J. N. Vickers, <em>Perception, cognition, and decision training : the quiet eye in action</em>. Champaign, Il: Human Kinetics, 2007.</p>
+
+<p>‌</p>
+
+<p>[m1] “2025 golf courses and Country Clubs Industry Market Research Report,” Kentley Insights, https://www.kentleyinsights.com/golf-courses-and-country-clubs-industry-market-research-report/ (accessed Apr. 3, 2026).</p>
+
+<p>[m2] MordorIntel, “Golf Equipment Market Size, share & Industry Report, 2031,” Mordor Intelligence, https://www.mordorintelligence.com/industry-reports/golf-equipment-market (accessed Apr. 3, 2026).</p>
+
+<p>[m3] “Golf GPS watches Market Size & Industry Growth 2030,” Golf GPS Watches Market Size & Industry Growth 2030, https://www.futuredatastats.com/golf-gps-watches-market (accessed Apr. 3, 2026).</p>
+
+<p>[m4] Vickers, J. N. (2012). Neuroscience of the Quiet Eye in Golf Putting. International Journal of Golf Science, 1(1), 2–19.</p>
+
+<p>[m5] Vine, S. J., Moore, L. J., & Wilson, M. R. (2011). Quiet eye training facilitates competitive putting performance in elite golfers. Frontiers in Psychology, 2, Article 8.</p>
+
+<p>[m6] Golf Monthly. (2025). How to calculate distance in the wind. GolfMonthly.com.</p>
+
+<p>[m7] Malik, S., et al. (2018). Effects of wind on ball flight. As cited in Golf Science Journal (2025).</p>
+
+<p>[m8] Golf Science Journal. (2025). Trust in Distance Measuring Devices (DMDs) Automation in Golf. International Journal of Golf Science.</p>
+
+<p>[m9] Golf Digest. (2025). Don’t underestimate the demand for caddies. GolfDigest.com.</p>
+
+<p>[m10] Scientific Reports. (2024). The effect of quiet eye training on golf putting performance in pressure situation. Nature Scientific Reports, 14, 55716.</p>
+
+<p>[R1] R. Camacho, “Requirements Traceability Matrix Templates & Examples,” <em>Parasoft</em>, Apr. 09, 2020. https://www.parasoft.com/blog/requirements-management-and-the-traceability-matrix/ (accessed Mar. 31, 2026).</p>
+
+<sl-divider></sl-divider>
+<div id="annex-a">
+  <h2>Annex A</h2>
+</div>
+
+<p>Jobs to be done steps</p>
+
+<p>THINK BOX</p>
+
+<ol>
+  <li>Figure out the lie of the ball</li>
+  <li>Decide the direction I want to be aiming</li>
+  <li>Determine the Ground Yardage</li>
+  <li>Find the wind Direction</li>
+  <li>Determine the Elevation</li>
+  <li>Determine the Playing Yardage</li>
+  <li>Decide how to play the shot</li>
+  <li>Decide what club to hit with</li>
+  <li>Decide the shot shape</li>
+  <li>Visualise the golf shot</li>
+  <li>Keeping yourself emotionally steady before addressing the ball</li>
+  <li>Get comfortable</li>
+</ol>
+
+<p>FEEL BOX</p>
+
+<ol start="13">
+  <li>Feel the swing, I want to swing</li>
+  <li>Get into a stance</li>
+  <li>Focus on the ball</li>
+  <li>Just react and pull the trigger</li>
+</ol>
+
+<p>PLAY BOX</p>
+
+<ol start="17">
+  <li>Observe the trajectory of the ball</li>
+  <li>Reflect on the previous shot</li>
+  <li>Proceed to find the ball</li>
+  <li>Just react and pull the trigger</li>
+</ol>
+
+<p>Comparison of 4 Sports Vision Techniques</p>
+
+<div style="overflow-x: auto;"><table>
+  <tr>
+    <th>Training method</th>
+    <th>Strengths</th>
+    <th>Limitations</th>
+  </tr>
+  <tr>
+    <td>Quiet Eye Training</td>
+    <td>Strongest golf-specific evidence QE-trained golfers made 1.9 fewer putts compared to pre-training QE duration is a good predictor of variance of putting performance [m5] Showed to maintain performance under stress [m10]</td>
+    <td>Without training, golfers might fall back below threshold</td>
+  </tr>
+  <tr>
+    <td>Stroboscopic Visual Training</td>
+    <td>Improves short-term visual memory (up to 24 hours) Enhances motion perception and transient attention in labs</td>
+    <td>No golf specific studies Requires opaque-lens flicker glasses that periodically block vision, incompatible with our application of on-course play More beneficial to sports with interruptions that require tracking of faster movements No reported benefit on stress</td>
+  </tr>
+  <tr>
+    <td>Perceptual-cognitive Training</td>
+    <td>Improves multi object tracking</td>
+    <td>No golf specific evidence, limited largely to hockey, soccer and basketball Requires screen-based set-up, not suitable for on-course play No reported benefits on stress</td>
+  </tr>
+  <tr>
+    <td>Simulation Training</td>
+    <td>Simulated pressure scenarios provide exposure training</td>
+    <td>Designed for practice settings, not for actual play</td>
+  </tr>
+</table></div>
+
       </div>
-    </div>  
+    </div>
+  </div>
   </div>
 
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+<sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
     <sl-icon name="arrow-up" label="Settings"></sl-icon>
   </sl-button>
 
