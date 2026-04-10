@@ -18,9 +18,12 @@ class Video extends HTMLElement {
 
   render() {
     const div = document.createElement("div");
+    const isLocal = this.source && !this.source.startsWith("http");
+    const mediaTag = isLocal
+      ? `<video id="${this.tag}" autoplay loop muted playsinline style="width:100%;"><source src="${this.source}" type="video/mp4"></video>`
+      : `<iframe id="${this.tag}" width="100%" src="${this.source}" allowfullscreen></iframe>`;
     div.innerHTML = `
-    <iframe id="${this.tag}" width="100%" src="${this.source}"
-      allowfullscreen></iframe>
+    ${mediaTag}
     <sub>${this.subtitle}</sub>
     <style>
       :host {
